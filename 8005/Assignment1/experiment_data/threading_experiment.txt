@@ -1,0 +1,99 @@
+
+
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread6 141650939
+141650939
+spent: 5.320150 secs
+141650939
+spent: 5.330402 secs
+141650939
+spent: 5.345049 secs
+141650939
+spent: 5.363283 secs
+141650939
+spent: 5.409448 secs
+141650939
+spent: 5.432961 secs
+
+Total spent: 5.433364 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread6 275604541
+275604541
+spent: 10.406180 secs
+275604541
+spent: 10.463977 secs
+275604541
+spent: 10.475171 secs
+275604541
+spent: 10.684398 secs
+275604541
+spent: 10.797078 secs
+275604541
+spent: 10.843395 secs
+
+Total spent: 10.843929 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread5 275604541
+275604541
+spent: 8.266532 secs
+275604541
+spent: 9.802132 secs
+275604541
+spent: 9.837715 secs
+275604541
+spent: 10.202521 secs
+275604541
+spent: 10.275882 secs
+
+Total spent: 10.276114 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread4 275604541
+275604541
+spent: 7.972217 secs
+275604541
+spent: 7.977858 secs
+275604541
+spent: 9.489164 secs
+275604541
+spent: 9.498611 secs
+
+Total spent: 9.498906 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread3 275604541
+275604541
+spent: 7.849611 secs
+275604541
+spent: 7.907723 secs
+275604541
+spent: 7.929413 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread3 275604541
+275604541
+spent: 7.655431 secs
+275604541
+spent: 7.668755 secs
+275604541
+spent: 7.704434 secs
+
+Total spent: 7.704795 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread2 275604541
+275604541
+spent: 7.572586 secs
+275604541
+spent: 7.723447 secs
+
+Total spent: 7.723573 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread1 275604541
+275604541
+spent: 6.835381 secs
+
+Total spent: 6.835590 secs
+peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./singlethread 275604541 6
+275604541
+spent: 7.678676 secs
+275604541
+spent: 6.610758 secs
+275604541
+spent: 6.631928 secs
+275604541
+spent: 6.611547 secs
+275604541
+spent: 6.698522 secs
+275604541
+spent: 6.998028 secs
+
+Total spent: 41.229606 secs

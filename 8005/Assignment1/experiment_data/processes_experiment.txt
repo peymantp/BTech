@@ -1,0 +1,70 @@
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./processes 1 275604541
+275604541
+spent: 6.542530 secs 
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./processes 2 275604541
+275604541
+spent: 7.692530 secs 
+275604541
+spent: 8.147778 secs 
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./processes 3 275604541
+275604541
+spent: 7.873421 secs 
+275604541
+spent: 7.930536 secs 
+275604541
+spent: 7.935526 secs 
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./processes 4 275604541
+275604541
+spent: 8.034604 secs 
+275604541
+spent: 8.099726 secs 
+275604541
+spent: 10.018410 secs 
+275604541
+spent: 10.026294 secs 
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./processes 5 275604541
+275604541
+spent: 8.312295 secs 
+275604541
+spent: 9.574999 secs 
+275604541
+spent: 9.718467 secs 
+275604541
+spent: 10.142860 secs 
+275604541
+spent: 10.218878 secs 
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$./processes 6 275604541
+275604541
+spent: 10.059076 secs 
+275604541
+spent: 10.069505 secs 
+275604541
+spent: 10.081507 secs 
+275604541
+spent: 10.103417 secs 
+275604541
+spent: 10.109515 secs 
+275604541
+spent: 10.609076 secs 
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$./processes 7 275604541
+275604541
+spent: 10.800041 secs 
+275604541
+spent: 10.954286 secs 
+275604541
+spent: 11.712835 secs 
+275604541
+spent: 11.961057 secs 
+275604541
+spent: 11.995694 secs 
+275604541
+spent: 12.017695 secs 
+275604541
+spent: 12.421504 secs 
+
