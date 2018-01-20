@@ -1,5 +1,3 @@
-
-
 peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread6 141650939
 141650939
 spent: 5.320150 secs
@@ -13,8 +11,8 @@ spent: 5.363283 secs
 spent: 5.409448 secs
 141650939
 spent: 5.432961 secs
-
 Total spent: 5.433364 secs
+
 peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread6 275604541
 275604541
 spent: 10.406180 secs
@@ -28,8 +26,8 @@ spent: 10.684398 secs
 spent: 10.797078 secs
 275604541
 spent: 10.843395 secs
-
 Total spent: 10.843929 secs
+
 peymantp@peymantp-desktop:~/Documents/Assignment_1$ ./multithread5 275604541
 275604541
 spent: 8.266532 secs
@@ -97,3 +95,48 @@ spent: 6.698522 secs
 spent: 6.998028 secs
 
 Total spent: 41.229606 secs
+
+-----------------------------------------------------------------------
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./threads 275604541
+spent: 11.963353 secs
+spent: 12.080435 secs
+spent: 12.228433 secs
+spent: 12.321437 secs
+spent: 12.505000 secs
+spent: 12.505471 secs
+spent: 12.578289 secs
+
+Total spent: 12.586694 secs
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./threads 275604541
+spent: 11.100489 secs
+spent: 12.074148 secs
+spent: 12.368896 secs
+spent: 12.434865 secs
+spent: 12.512965 secs
+spent: 12.772515 secs
+spent: 13.113497 secs
+Total spent: 13.117382 secs
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./threads 275604541
+spent: 14.365248 secs
+spent: 14.717688 secs
+spent: 14.731913 secs
+spent: 14.989829 secs
+spent: 15.029814 secs
+spent: 15.169645 secs
+spent: 15.214308 secs
+spent: 15.293659 secs
+Total spent: 15.307391 secs
+
+peymantp@peymantp-desktop:~/Documents/BTech/8005/Assignment1$ ./threads 275604541
+spent: 15.401875 secs
+spent: 15.398693 secs
+spent: 15.540959 secs
+spent: 15.727862 secs
+spent: 15.848067 secs
+spent: 15.937787 secs
+spent: 15.969479 secs
+spent: 16.044928 secs
+spent: 16.326734 secs
+Total spent: 16.328229 secs
