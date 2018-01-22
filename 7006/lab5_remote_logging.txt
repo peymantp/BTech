@@ -1,0 +1,50 @@
+lab 5     
+-----
+
+NOTE: 
+	- rsyslog uses port514
+	- need to restart rsyslog when changing its conf file /etc/rsyslog.conf
+
+Server: machine where log messages will be written to
+Client: machine that will send its log messages to server
+
+============================================================================
+1. install rsyslog on client and server
+
+	dnf install rsyslog
+
+
+2. On Client side Modify config file /etc/rsyslog.conf to specify location
+   of remote logging server. Add the following to bottom of file:
+
+	example: *.*@RemoteSyslogIPAddress:Port
+	
+	*.*@192.168.0.X:514
+		
+
+3. On the server side modify the config file /etc/rsyslog.conf to allow 
+   remote logging to occur. Add the following to the bottom of file:
+
+	# Begin - Allow remote logging
+	$ModLoad imudp.so
+	$UDPServerRun 514
+	# End - Allow remote logging
+
+
+4. On the client start rsyslog by typing the following into terminal
+	 
+	systemctl start rsyslog
+
+
+5. On the server start syslog so that it will read logs sent from remote
+   system by adding the -r flag
+
+	systemctl start rsyslog -r
+
+
+6. Go on client machine and create a new user in order to create a log entry
+
+
+7. On the server go to file var/log/secure and notice the log entries
+   made that were sent from the client computer
+============================================================================ 

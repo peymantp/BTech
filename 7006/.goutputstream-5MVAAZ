@@ -1,0 +1,6 @@
+lab7
+
+tcpdump
+tcpdump -i enol1 -w /root/Documents/tcp.dump "tcp port 23 and "host 192.168.0.x or host 192.168.0.y"  
+wireshark filter
+((ip.src == 192.168.0.10 && ip.dst == 192.168.0.7) || (ip.src == 192.168.0.7 && ip.dst == 192.168.0.10)) && tcp.port==23

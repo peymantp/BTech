@@ -1,0 +1,16 @@
+dnf install telnet-server -y
+dnf install xinetd -y
+
+chmod 777 /etc/xinetd.conf
+in file /etc/xinetd.conf
+service telnet
+{
+socket_type = stream
+user = root
+wait = no
+server = /usr/sbin/in.telnetd
+only_from = 192.168.0.26
+}
+
+to start
+systemctl start xinetd
