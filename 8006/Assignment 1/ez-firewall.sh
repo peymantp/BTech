@@ -29,6 +29,8 @@ $IPT --append ACCOUNTANT --match state --state NEW --protocol tcp --source-port 
 $IPT --append ACCOUNTANT --match state --state NEW --protocol tcp --destination-port 22 --jump ACCEPT
 
 #Permit inbound/outbound www packets
+$IPT --append ACCOUNTANT --match state --state NEW --protocol tcp --source-port 443 --jump ACCEPT
+$IPT --append ACCOUNTANT --match state --state NEW --protocol tcp --destination-port 443 --jump ACCEPT
 
 #Drop inbound traffic to port 80 (http) from source ports less than 1024
 $IPT --append ACCOUNTANT --destination-port 80 --source-port 0:1023 DROP
