@@ -1,0 +1,3 @@
+lab7
+wireshark filter
+((ip.src == 192.168.0.10 && ip.dst == 192.168.0.7) || (ip.src == 192.168.0.7 && ip.dst == 192.168.0.10)) && tcp.port==23

@@ -1,0 +1,23 @@
+lab8
+dnf install glibc-devel -y
+dnf install ncurses -y
+dnf install ncurses-devel -y
+dnf install gcc -y
+dnf install kernel-source -y
+
+https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.tar.xz
+extract to /usr/src/kernels/linux-4.14
+
+make localmodconfig
+make menuconfig
+---
+do setup stuff
+---
+
+make clean
+make -j 4
+
+dnf install elfutils
+
+make modules_install
+make install
