@@ -1,0 +1,16 @@
+# Nmap 7.60 scan initiated Mon Jan 29 13:43:47 2018 as: nmap -oA results --append-output -p 80,443,53,22,0 192.168.0.5
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 0/filtered/tcp/////, 22/filtered/tcp//ssh///, 53/closed/tcp//domain///, 80/closed/tcp//http///, 443/closed/tcp//https///
+# Nmap done at Mon Jan 29 13:43:48 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds
+# Nmap 7.60 scan initiated Mon Jan 29 13:43:48 2018 as: nmap -oA results --append-output -sU -p 80,443,53,22,0 192.168.0.5
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 0/open|filtered/udp/////, 22/open|filtered/udp//ssh///, 53/open|filtered/udp//domain///, 80/open|filtered/udp//http///, 443/open|filtered/udp//https///
+# Nmap done at Mon Jan 29 13:43:50 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds
+# Nmap 7.60 scan initiated Mon Jan 29 13:46:09 2018 as: nmap -oA results --append-output -p 80,443,53,22,0 192.168.0.5
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 0/filtered/tcp/////, 22/filtered/tcp//ssh///, 53/closed/tcp//domain///, 80/closed/tcp//http///, 443/closed/tcp//https///
+# Nmap done at Mon Jan 29 13:46:11 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds
+# Nmap 7.60 scan initiated Mon Jan 29 13:46:11 2018 as: nmap -oA results --append-output -sU -p 80,443,53,22,0 192.168.0.5
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 0/open|filtered/udp/////, 22/open|filtered/udp//ssh///, 53/open|filtered/udp//domain///, 80/open|filtered/udp//http///, 443/open|filtered/udp//https///
+# Nmap done at Mon Jan 29 13:46:12 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds

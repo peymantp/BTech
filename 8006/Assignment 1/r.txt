@@ -1,0 +1,33 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-01-29 13:46 PST
+Nmap scan report for 192.168.0.5
+Host is up (0.00028s latency).
+
+PORT    STATE    SERVICE
+0/tcp   filtered unknown
+22/tcp  filtered ssh
+53/tcp  closed   domain
+80/tcp  closed   http
+443/tcp closed   https
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.51 seconds
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-01-29 13:46 PST
+Nmap scan report for 192.168.0.5
+Host is up (0.00032s latency).
+
+PORT    STATE         SERVICE
+0/udp   open|filtered unknown
+22/udp  open|filtered ssh
+53/udp  open|filtered domain
+80/udp  open|filtered http
+443/udp open|filtered https
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.51 seconds
+
+--- 192.168.0.5 hping statistic ---
+10 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.5 (eno1 192.168.0.5): S set, 40 headers + 0 data bytes

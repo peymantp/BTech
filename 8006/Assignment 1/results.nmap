@@ -1,0 +1,52 @@
+# Nmap 7.60 scan initiated Mon Jan 29 13:43:47 2018 as: nmap -oA results --append-output -p 80,443,53,22,0 192.168.0.5
+Nmap scan report for 192.168.0.5
+Host is up (0.00041s latency).
+
+PORT    STATE    SERVICE
+0/tcp   filtered unknown
+22/tcp  filtered ssh
+53/tcp  closed   domain
+80/tcp  closed   http
+443/tcp closed   https
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Mon Jan 29 13:43:48 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds
+# Nmap 7.60 scan initiated Mon Jan 29 13:43:48 2018 as: nmap -oA results --append-output -sU -p 80,443,53,22,0 192.168.0.5
+Nmap scan report for 192.168.0.5
+Host is up (0.00025s latency).
+
+PORT    STATE         SERVICE
+0/udp   open|filtered unknown
+22/udp  open|filtered ssh
+53/udp  open|filtered domain
+80/udp  open|filtered http
+443/udp open|filtered https
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Mon Jan 29 13:43:50 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds
+# Nmap 7.60 scan initiated Mon Jan 29 13:46:09 2018 as: nmap -oA results --append-output -p 80,443,53,22,0 192.168.0.5
+Nmap scan report for 192.168.0.5
+Host is up (0.00028s latency).
+
+PORT    STATE    SERVICE
+0/tcp   filtered unknown
+22/tcp  filtered ssh
+53/tcp  closed   domain
+80/tcp  closed   http
+443/tcp closed   https
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Mon Jan 29 13:46:11 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds
+# Nmap 7.60 scan initiated Mon Jan 29 13:46:11 2018 as: nmap -oA results --append-output -sU -p 80,443,53,22,0 192.168.0.5
+Nmap scan report for 192.168.0.5
+Host is up (0.00032s latency).
+
+PORT    STATE         SERVICE
+0/udp   open|filtered unknown
+22/udp  open|filtered ssh
+53/udp  open|filtered domain
+80/udp  open|filtered http
+443/udp open|filtered https
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Mon Jan 29 13:46:12 2018 -- 1 IP address (1 host up) scanned in 1.51 seconds

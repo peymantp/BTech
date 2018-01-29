@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Mon Jan 29 13:43:47 2018 as: nmap -oA results -&#45;append-output -p 80,443,53,22,0 192.168.0.5 -->
+<nmaprun scanner="nmap" args="nmap -oA results -&#45;append-output -p 80,443,53,22,0 192.168.0.5" start="1517262227" startstr="Mon Jan 29 13:43:47 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="5" services="0,22,53,80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1517262227" endtime="1517262228"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.5" addrtype="ipv4"/>
+<address addr="98:90:96:DC:EB:26" addrtype="mac" vendor="Dell"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="0"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="409" rttvar="2303" to="100000"/>
+</host>
+<runstats><finished time="1517262228" timestr="Mon Jan 29 13:43:48 2018" elapsed="1.51" summary="Nmap done at Mon Jan 29 13:43:48 2018; 1 IP address (1 host up) scanned in 1.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Mon Jan 29 13:43:48 2018 as: nmap -oA results -&#45;append-output -sU -p 80,443,53,22,0 192.168.0.5 -->
+<nmaprun scanner="nmap" args="nmap -oA results -&#45;append-output -sU -p 80,443,53,22,0 192.168.0.5" start="1517262228" startstr="Mon Jan 29 13:43:48 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="5" services="0,22,53,80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1517262228" endtime="1517262230"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.5" addrtype="ipv4"/>
+<address addr="98:90:96:DC:EB:26" addrtype="mac" vendor="Dell"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="0"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="udp" portid="22"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="udp" portid="53"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="80"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="udp" portid="443"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="254" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1517262230" timestr="Mon Jan 29 13:43:50 2018" elapsed="1.51" summary="Nmap done at Mon Jan 29 13:43:50 2018; 1 IP address (1 host up) scanned in 1.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Mon Jan 29 13:46:09 2018 as: nmap -oA results -&#45;append-output -p 80,443,53,22,0 192.168.0.5 -->
+<nmaprun scanner="nmap" args="nmap -oA results -&#45;append-output -p 80,443,53,22,0 192.168.0.5" start="1517262369" startstr="Mon Jan 29 13:46:09 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="5" services="0,22,53,80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1517262369" endtime="1517262371"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.5" addrtype="ipv4"/>
+<address addr="98:90:96:DC:EB:26" addrtype="mac" vendor="Dell"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="0"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="282" rttvar="2140" to="100000"/>
+</host>
+<runstats><finished time="1517262371" timestr="Mon Jan 29 13:46:11 2018" elapsed="1.51" summary="Nmap done at Mon Jan 29 13:46:11 2018; 1 IP address (1 host up) scanned in 1.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Mon Jan 29 13:46:11 2018 as: nmap -oA results -&#45;append-output -sU -p 80,443,53,22,0 192.168.0.5 -->
+<nmaprun scanner="nmap" args="nmap -oA results -&#45;append-output -sU -p 80,443,53,22,0 192.168.0.5" start="1517262371" startstr="Mon Jan 29 13:46:11 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="5" services="0,22,53,80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1517262371" endtime="1517262372"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.5" addrtype="ipv4"/>
+<address addr="98:90:96:DC:EB:26" addrtype="mac" vendor="Dell"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="0"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="udp" portid="22"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="udp" portid="53"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="80"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="udp" portid="443"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="316" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1517262372" timestr="Mon Jan 29 13:46:12 2018" elapsed="1.51" summary="Nmap done at Mon Jan 29 13:46:12 2018; 1 IP address (1 host up) scanned in 1.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

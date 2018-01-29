@@ -1,0 +1,28 @@
+Chain INPUT (policy DROP 251 packets, 42340 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+  284 45246 ACCOUNTANT  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+Chain FORWARD (policy DROP 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy DROP 40 packets, 5344 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+   50  5951 ACCOUNTANT  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+Chain ACCOUNTANT (2 references)
+ pkts bytes target     prot opt in     out     source               destination         
+   10   400 DROP       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spts:0:1023 dpt:80
+    0     0 DROP       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:0 state RELATED,ESTABLISHED
+    0     0 DROP       udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:0 state RELATED,ESTABLISHED
+    2    88 DROP       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:0
+    2    56 DROP       udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:0
+    6   839 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:80 state RELATED,ESTABLISHED
+    6   405 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80
+    1    40 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:443 state RELATED,ESTABLISHED
+    1    44 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443
+    2   442 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:53
+    4   206 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:53
+    1    40 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:53
+    1    44 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            state NEW tcp spt:22
+    2    88 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:22
