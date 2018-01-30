@@ -1,10 +1,13 @@
 #!/bin/bash
 
+#Usage: ./test.sh &> <filename>
+#outputs 4 document files
+
 #Global
 test='nmap -oA results --append-output '
-tcpservices="80,443,53,22,0"
-udpservices="80,443,53,22,0"
-ip_list="192.168.0.12"
+tcpservices="80 443 53 22 0"
+udpservices="80 443 53 22 0"
+ip_list="192.168.0.12" #target pc
 
 for ip in $ip_list ; do
     $test -p $tcpservices $ip
