@@ -17,8 +17,8 @@ $IPT --new MYFILTER
 $IPT -I INPUT --jump MYFILTER
 $IPT -I OUTPUT --jump MYFILTER
 
-$IPT --new assh
-$IPT --new aweb
+$IPT --new assh #used for tracking all SSH packets
+$IPT --new aweb #used for tracking all Web packets packets
 
 #Drop inbound traffic to port 80 (http) from source ports less than 1024
 $IPT --append MYFILTER --protocol tcp --match tcp --dport 80 --sport 0:1023 --jump DROP
@@ -41,8 +41,6 @@ $IPT --append aweb --jump ACCEPT
 echo 'Allow internet browsing'
 
 #Allow DNS and DHCP traffic through so that your machine can function properly
-$IPT --append MYFILTER --protocol udp --match udp --sport 53 --jump ACCEPT
-$IPT --append MYFILTER --protocol udp --match udp --dport 53 --jump ACCEPT
 $IPT --append MYFILTER --protocol tcp --match tcp --sport 53 --jump ACCEPT
 $IPT --append MYFILTER --protocol tcp --match tcp --dport 53 --jump ACCEPT
 echo 'Allow DNS DHCP'
