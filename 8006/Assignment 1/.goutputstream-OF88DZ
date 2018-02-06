@@ -44,13 +44,18 @@ echo 'Allow internet browsing'
 $IPT --append MYFILTER --protocol tcp --match tcp --sport 53 --jump ACCEPT
 $IPT --append MYFILTER --protocol tcp --match tcp --dport 53 --jump ACCEPT
 
+$IPT --append MYFILTER --protocol tcp --match tcp --sport 30000 --jump ACCEPT
+$IPT --append MYFILTER --protocol tcp --match tcp --dport 30000 --jump ACCEPT
+
 $IPT --append MYFILTER --protocol udp --match udp --sport 53 --jump ACCEPT
 $IPT --append MYFILTER --protocol udp --match udp --dport 53 --jump ACCEPT
 echo 'Allow DNS DHCP'
 
 #Permit inbound/outbound ssh packets
-$IPT --append MYFILTER --match state --state NEW --protocol tcp --source-port 22 --jump assh
-$IPT --append MYFILTER --match state --state NEW --protocol tcp --destination-port 22 --jump assh
+$IPT --append MYFILTER --protocol udp --match udp --sport 22 --jump assh
+$IPT --append MYFILTER --protocol udp --match udp --dport 22 --jump assh
+$IPT --append MYFILTER --protocol tcp --match tcp --sport 22 --jump assh
+$IPT --append MYFILTER --protocol tcp --match tcp --dport 22 --jump assh
 $IPT --append assh --jump ACCEPT
 echo 'Allow in/out ssh'
 

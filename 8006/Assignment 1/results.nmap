@@ -1,0 +1,144 @@
+# Nmap 7.60 scan initiated Thu Feb  1 12:33:40 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00029s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:33:43 2018 -- 2 IP addresses (2 hosts up) scanned in 2.55 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:33:43 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up (0.000079s latency).
+
+PORT   STATE    SERVICE
+80/udp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00024s latency).
+
+PORT   STATE         SERVICE
+80/udp open|filtered http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:33:44 2018 -- 2 IP addresses (2 hosts up) scanned in 0.73 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:38:39 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00026s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:38:42 2018 -- 2 IP addresses (2 hosts up) scanned in 2.55 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:38:42 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up (0.000052s latency).
+
+PORT   STATE    SERVICE
+80/udp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00028s latency).
+
+PORT   STATE         SERVICE
+80/udp open|filtered http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:38:42 2018 -- 2 IP addresses (2 hosts up) scanned in 0.74 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:40:56 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00029s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:40:58 2018 -- 2 IP addresses (2 hosts up) scanned in 2.54 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:40:58 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up (0.00010s latency).
+
+PORT   STATE    SERVICE
+80/udp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00026s latency).
+
+PORT   STATE         SERVICE
+80/udp open|filtered http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:40:59 2018 -- 2 IP addresses (2 hosts up) scanned in 0.73 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:41:53 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up.
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00028s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:41:55 2018 -- 2 IP addresses (2 hosts up) scanned in 2.55 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:41:55 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+setup_target: failed to determine route to 443 (0.0.1.187)
+setup_target: failed to determine route to 53 (0.0.0.53)
+setup_target: failed to determine route to 22 (0.0.0.22)
+Nmap scan report for 0 (0.0.0.0)
+Host is up (0.00011s latency).
+
+PORT   STATE    SERVICE
+80/udp filtered http
+
+Nmap scan report for 192.168.0.5
+Host is up (0.00027s latency).
+
+PORT   STATE         SERVICE
+80/udp open|filtered http
+MAC Address: 98:90:96:DC:EB:26 (Dell)
+
+# Nmap done at Thu Feb  1 12:41:56 2018 -- 2 IP addresses (2 hosts up) scanned in 0.74 seconds

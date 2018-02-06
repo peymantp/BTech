@@ -1,0 +1,21 @@
+# Phase 1
+- Analyse all the technical details
+	- protocols
+	- type & function
+	- header fields
+		-check if they make sense
+	- log files
+- Draw some conclusions (working hypothesis)
+	- Apply TCP/IP, networking theories and knowledge to arrive at a conclusion
+	- Examine any available log files or payload of data
+	- Plausible explination (don't give absolute answers)
+		- "I persume <this> from these tests
+
+#Phase 2
+## Three main questions
+### Question 1: What 
+- (Phase 1)
+### Question 2: Why? did you get attacked
+- 
+### Question 3: Who?
+- 

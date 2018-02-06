@@ -1,0 +1,48 @@
+# Nmap 7.60 scan initiated Thu Feb  1 12:33:40 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/tcp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open/tcp//http///
+# Nmap done at Thu Feb  1 12:33:43 2018 -- 2 IP addresses (2 hosts up) scanned in 2.55 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:33:43 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/udp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open|filtered/udp//http///
+# Nmap done at Thu Feb  1 12:33:44 2018 -- 2 IP addresses (2 hosts up) scanned in 0.73 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:38:39 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/tcp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open/tcp//http///
+# Nmap done at Thu Feb  1 12:38:42 2018 -- 2 IP addresses (2 hosts up) scanned in 2.55 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:38:42 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/udp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open|filtered/udp//http///
+# Nmap done at Thu Feb  1 12:38:42 2018 -- 2 IP addresses (2 hosts up) scanned in 0.74 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:40:56 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/tcp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open/tcp//http///
+# Nmap done at Thu Feb  1 12:40:58 2018 -- 2 IP addresses (2 hosts up) scanned in 2.54 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:40:58 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/udp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open|filtered/udp//http///
+# Nmap done at Thu Feb  1 12:40:59 2018 -- 2 IP addresses (2 hosts up) scanned in 0.73 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:41:53 2018 as: nmap -oA results --append-output -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/tcp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open/tcp//http///
+# Nmap done at Thu Feb  1 12:41:55 2018 -- 2 IP addresses (2 hosts up) scanned in 2.55 seconds
+# Nmap 7.60 scan initiated Thu Feb  1 12:41:55 2018 as: nmap -oA results --append-output -sU -p 80 443 53 22 0 192.168.0.5
+Host: 0.0.0.0 ()	Status: Up
+Host: 0.0.0.0 ()	Ports: 80/filtered/udp//http///
+Host: 192.168.0.5 ()	Status: Up
+Host: 192.168.0.5 ()	Ports: 80/open|filtered/udp//http///
+# Nmap done at Thu Feb  1 12:41:56 2018 -- 2 IP addresses (2 hosts up) scanned in 0.74 seconds
