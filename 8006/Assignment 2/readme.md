@@ -40,6 +40,30 @@ inbound vs outbound behaviour
 ## script1 - configuration
 
 ## script2 - Testing
+the premise here is that 3 pcs are involved
+for this assignment we shall refer to them as TEST, FIREWALL(FW) and CLIENT
+TEST: the pc running the script from the external network
+CLIENT: the 'sample' client on the internal network
+FW: the firewall (which, in effect, by design, serves as the bridge between the external and internal networks)
+
+We need to test both the server and internal client vulnerabilities
+the tests, thereby need to run against both.
+
+### preparatory testing
+1. ensure scripts configure each machine correctly.
+TEST: en01 only, CLIENT: enp3s2 only, FW: both cards
+all ports open on all machines
+test basic connectivity
+run test scripts
+
+2. shut down all ports
+
+### test firewall vulnerability
+NOTHING should get in
+
+### test client vulnerability
+prescribed ports ONLY get in
+specified safeguards should be confirmed
 
 ## user configuration
 get config <filename>
