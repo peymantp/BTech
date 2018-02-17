@@ -18,7 +18,8 @@ declare -a arr=("christian-kohler.npm-intellisense"
 	"ms-vscode.PowerShell"
 	"pmneo.tsimporter"
 	"twxs.cmake"
-	"vector-of-bool.cmake-tools")
+	"vector-of-bool.cmake-tools"
+	"tomoki1207.pdf")
 
 #iterate and install
 for i in "${arr[@]}"
