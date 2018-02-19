@@ -1,0 +1,3 @@
+[submodule "8005/multiserve"]
+	path = 8005/multiserve
+	url = https://github.com/jhewarren/multiserve.git
