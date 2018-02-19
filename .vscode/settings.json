@@ -1,0 +1,9 @@
+{
+	"editor.insertSpaces": false,
+	"editor.cursorStyle": "line-thin",
+	"editor.wordWrap": "wordWrapColumn",
+	"explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+	"explorer.confirmDragAndDrop": false,
+	"files.eol": "\n"
+}
