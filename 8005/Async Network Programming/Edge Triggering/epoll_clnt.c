@@ -37,6 +37,7 @@
 #include <strings.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include "lib/socketwrapper.h"
 
 #define SERVER_TCP_PORT		7000	// Default port
 #define BUFLEN			80  	// Buffer length
@@ -68,9 +69,9 @@ int main (int argc, char **argv)
 	// Create the socket
 	if ((sd = socket(AF_INET, SOCK_STREAM, 0)) == -1)
 	{
-		perror("Cannot create socket");
 		exit(1);
 	}
+
 	bzero((char *)&server, sizeof(struct sockaddr_in));
 	server.sin_family = AF_INET;
 	server.sin_port = htons(port);

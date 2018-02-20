@@ -100,7 +100,7 @@ int main (int argc, char* argv[])
 		SystemFatal("listen");
     	
     	// Create the epoll file descriptor
-    	epoll_fd = epoll_create(EPOLL_QUEUE_LEN);
+    	epoll_fd = epoll_create1(EPOLL_QUEUE_LEN);
     	if (epoll_fd == -1) 
 		SystemFatal("epoll_create");
     	
@@ -111,7 +111,7 @@ int main (int argc, char* argv[])
 		SystemFatal("epoll_ctl");
     	
 	// Execute the epoll event loop
-    	while (TRUE) 
+	while (TRUE) 
 	{
 		//struct epoll_event events[MAX_EVENTS];
 		num_fds = epoll_wait (epoll_fd, events, EPOLL_QUEUE_LEN, -1);
@@ -120,17 +120,18 @@ int main (int argc, char* argv[])
 
 		for (i = 0; i < num_fds; i++) 
 		{
-	    		// Case 1: Error condition
-	    		if (events[i].events & (EPOLLHUP | EPOLLERR)) 
+			// Case 1: Error condition
+			if (events[i].events & (EPOLLHUP | EPOLLERR)) 
 			{
 				fputs("epoll: EPOLLERR", stderr);
 				close(events[i].data.fd);
 				continue;
-	    		}
-	    		assert (events[i].events & EPOLLIN);
+			}
+			//Crash 
+			assert (events[i].events & EPOLLIN);
 
-	    		// Case 2: Server is receiving a connection request
-	    		if (events[i].data.fd == fd_server) 
+			// Case 2: Server is receiving a connection request
+			if (events[i].data.fd == fd_server) 
 			{
 				//socklen_t addr_size = sizeof(remote_addr);
 				fd_new = accept (fd_server, (struct sockaddr*) &remote_addr, &addr_size);

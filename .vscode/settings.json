@@ -5,5 +5,14 @@
 	"explorer.confirmDelete": false,
     "editor.minimap.enabled": false,
 	"explorer.confirmDragAndDrop": false,
-	"files.eol": "\n"
+	"files.eol": "\n",
+	"files.associations": {
+		"iostream": "cpp",
+		"fstream": "cpp",
+		"array": "cpp",
+		"initializer_list": "cpp",
+		"utility": "cpp",
+		"limits": "cpp",
+		"sstream": "cpp"
+	}
 }
