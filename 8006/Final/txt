@@ -1,0 +1,493 @@
+14:34:44(-)root@datacomm-09:etc$ cd
+14:34:46(-)root@datacomm-09:~$ cd Downloads/
+14:34:57(-)root@datacomm-09:Downloads$ ls -al
+total 31712
+drwxr-xr-x.  4 root root     4096 Feb 22 14:34 .
+dr-xr-x---. 27 root root     4096 Feb 22 14:16 ..
+drwxr-xr-x.  6 1000 1000     4096 Feb 22 13:31 daq-2.0.6
+-rw-r--r--.  1 root root   518013 Feb 22 13:26 daq-2.0.6.tar.gz
+-rw-r--r--.  1 root root     6286 Feb 20 22:14 echo_client.py
+-rw-r--r--.  1 root root 24434819 Feb 21 22:28 err.log
+drwxr-xr-x. 11 root root     4096 Feb 22 14:29 snort-2.9.11.1
+-rw-r--r--.  1 root root  6442755 Feb 22 13:17 snort-2.9.11.1.tar.gz
+-rw-r--r--.  1 root root    24729 Feb 22 14:23 snort.conf
+-rw-r--r--.  1 root root  1018558 Feb 22 14:34 SnortSnarf-1.0.tar.gz
+14:34:58(-)root@datacomm-09:Downloads$ tar -xaf SnortSnarf-1.0.tar.gz 
+14:35:02(-)root@datacomm-09:Downloads$ cd SnortSnarf-1.0/
+14:35:03(-)root@datacomm-09:SnortSnarf-1.0$ ls -al
+total 184
+drwxr-xr-x. 11  500 users  4096 Jul  5  2006 .
+drwxr-xr-x.  5 root root   4096 Feb 22 14:35 ..
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 cgi
+-r--r--r--.  1  500 users 20241 Jul  5  2006 Changes
+-r--r--r--.  1  500 users 18007 Jul  5  2006 COPYING
+drwxr-xr-x.  3  500 users  4096 Jul  5  2006 include
+-r--r--r--.  1  500 users    36 Jul  5  2006 new-annotation-base.xml
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 nmap2html
+-rw-------.  1  500 users  1436 Jul  5  2006 nohup.out
+-rw-rw-r--.  1  500 users   224 Jul  5  2006 quick.dat
+drwxrwxr-x.  2  500 users  4096 Jul  5  2006 RCS
+-rw-r--r--.  1  500 users  6635 Jul  5  2006 README
+lrwxrwxrwx.  1  500 users    26 Jul  5  2006 README.nmap2html -> nmap2html/README.nmap2html
+lrwxrwxrwx.  1  500 users    16 Jul  5  2006 README.SISR -> sisr/README.SISR
+-rw-rw-r--.  1  500 users  4695 Jul  5  2006 run.out
+drwxr-xr-x.  5  500 users  4096 Jul  5  2006 sisr
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 snfout.snort.alert
+drwxr-xr-x.  9  500 users  4096 Jul  5  2006 SnortSnarf-021111.1
+-rwxr-xr-x.  1  500 users 18527 Jul  5  2006 snortsnarf.pl
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start1
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start2
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start3
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop1
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop2
+-rw-r--r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop3
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 Time-modules
+-r--r--r--.  1  500 users 17854 Jul  5  2006 Usage
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 utilities
+14:35:04(-)root@datacomm-09:SnortSnarf-1.0$ nvim README
+14:35:35(-)root@datacomm-09:SnortSnarf-1.0$ cd ..
+14:35:37(-)root@datacomm-09:Downloads$ ls -la
+total 31744
+drwxr-xr-x.  5 root root      4096 Feb 22 14:35 .
+dr-xr-x---. 27 root root      4096 Feb 22 14:16 ..
+drwxr-xr-x.  6 1000  1000     4096 Feb 22 13:31 daq-2.0.6
+-rw-r--r--.  1 root root    518013 Feb 22 13:26 daq-2.0.6.tar.gz
+-rw-r--r--.  1 root root      6286 Feb 20 22:14 echo_client.py
+-rw-r--r--.  1 root root  24434819 Feb 21 22:28 err.log
+drwxr-xr-x. 11 root root      4096 Feb 22 14:29 snort-2.9.11.1
+-rw-r--r--.  1 root root   6442755 Feb 22 13:17 snort-2.9.11.1.tar.gz
+-rw-r--r--.  1 root root     24729 Feb 22 14:23 snort.conf
+drwxr-xr-x. 11  500 users     4096 Jul  5  2006 SnortSnarf-1.0
+-rw-r--r--.  1 root root   1018558 Feb 22 14:34 SnortSnarf-1.0.tar.gz
+-rw-r--r--.  1 root root     26644 Feb 22 14:35 Time-ParseDate-2015.103.tar.gz
+14:35:38(-)root@datacomm-09:Downloads$ tar -xaf Time-ParseDate-2015.103.tar.gz 
+14:35:42(-)root@datacomm-09:Downloads$ ls -la
+total 31748
+drwxr-xr-x.  6 root root      4096 Feb 22 14:35 .
+dr-xr-x---. 27 root root      4096 Feb 22 14:16 ..
+drwxr-xr-x.  6 1000  1000     4096 Feb 22 13:31 daq-2.0.6
+-rw-r--r--.  1 root root    518013 Feb 22 13:26 daq-2.0.6.tar.gz
+-rw-r--r--.  1 root root      6286 Feb 20 22:14 echo_client.py
+-rw-r--r--.  1 root root  24434819 Feb 21 22:28 err.log
+drwxr-xr-x. 11 root root      4096 Feb 22 14:29 snort-2.9.11.1
+-rw-r--r--.  1 root root   6442755 Feb 22 13:17 snort-2.9.11.1.tar.gz
+-rw-r--r--.  1 root root     24729 Feb 22 14:23 snort.conf
+drwxr-xr-x. 11  500 users     4096 Jul  5  2006 SnortSnarf-1.0
+-rw-r--r--.  1 root root   1018558 Feb 22 14:34 SnortSnarf-1.0.tar.gz
+drwxr-xr-x.  4 1000  1000     4096 Oct 30  2015 Time-ParseDate-2015.103
+-rw-r--r--.  1 root root     26644 Feb 22 14:35 Time-ParseDate-2015.103.tar.gz
+14:35:43(-)root@datacomm-09:Downloads$ mv Time-ParseDate-2015.103 SnortSnarf-1.0/Time-modules/
+14:35:50(-)root@datacomm-09:Downloads$ cd SnortSnarf-1.0/Time-modules/
+14:35:56(-)root@datacomm-09:Time-modules$ ls -al
+total 12
+drwxr-xr-x.  3  500 users 4096 Feb 22 14:35 .
+drwxr-xr-x. 11  500 users 4096 Jul  5  2006 ..
+drwxr-xr-x.  4 1000  1000 4096 Oct 30  2015 Time-ParseDate-2015.103
+14:35:56(-)root@datacomm-09:Time-modules$ cd Time-ParseDate-2015.103/
+14:35:58(-)root@datacomm-09:Time-ParseDate-2015.103$ ls -al
+total 44
+drwxr-xr-x. 4 1000  1000 4096 Oct 30  2015 .
+drwxr-xr-x. 3  500 users 4096 Feb 22 14:35 ..
+-rw-r--r--. 1 1000  1000 7796 Oct 30  2015 Changes
+drwxr-xr-x. 3 1000  1000 4096 Oct 30  2015 lib
+-rw-r--r--. 1 1000  1000  482 Oct 30  2015 Makefile.PL
+-rw-r--r--. 1 1000  1000  353 Oct 30  2015 MANIFEST
+-rw-r--r--. 1 1000  1000  953 Oct 30  2015 META.json
+-rw-r--r--. 1 1000  1000  549 Oct 30  2015 META.yml
+-rw-r--r--. 1 1000  1000  604 Nov 28  1998 README
+drwxr-xr-x. 2 1000  1000 4096 Oct 30  2015 t
+14:35:59(-)root@datacomm-09:Time-ParseDate-2015.103$ nvim README 
+14:36:18(-)root@datacomm-09:Time-ParseDate-2015.103$ perl Makefile.PL 
+\Can't locate ExtUtils/MakeMaker.pm in @INC (you may need to install the ExtUtils::MakeMaker module) (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5) at Makefile.PL line 2.
+BEGIN failed--compilation aborted at Makefile.PL line 2.
+14:36:27(-)root@datacomm-09:Time-ParseDate-2015.103$ dnf install -y perl-ExtUtils-MakeMaker
+Last metadata expiration check: 0:05:45 ago on Thu 22 Feb 2018 02:31:08 PM PST.
+Dependencies resolved.
+==============================================================================================================================================================================================================================================
+ Package                                                               Arch                                             Version                                                       Repository                                         Size
+==============================================================================================================================================================================================================================================
+Installing:
+ perl-ExtUtils-MakeMaker                                               noarch                                           1:7.30-2.fc27                                                 fedora                                            296 k
+Installing dependencies:
+ perl-CPAN-Meta-Requirements                                           noarch                                           2.140-395.fc27                                                fedora                                             35 k
+ perl-CPAN-Meta-YAML                                                   noarch                                           0.018-395.fc27                                                fedora                                             32 k
+ perl-ExtUtils-Command                                                 noarch                                           1:7.30-2.fc27                                                 fedora                                             17 k
+ perl-ExtUtils-Install                                                 noarch                                           2.14-3.fc27                                                   fedora                                             45 k
+ perl-ExtUtils-Manifest                                                noarch                                           1.70-394.fc27                                                 fedora                                             35 k
+ perl-ExtUtils-ParseXS                                                 noarch                                           1:3.35-1.fc27                                                 fedora                                             81 k
+ perl-JSON-PP                                                          noarch                                           1:2.94-4.fc27                                                 fedora                                             65 k
+ perl-Test-Harness                                                     noarch                                           1:3.39-4.fc27                                                 fedora                                            276 k
+ perl-devel                                                            x86_64                                           4:5.26.1-402.fc27                                             updates                                           594 k
+ perl-version                                                          x86_64                                           6:0.99.18-5.fc27                                              fedora                                             65 k
+ python3-pyparsing                                                     noarch                                           2.1.10-4.fc27                                                 fedora                                            140 k
+ systemtap-sdt-devel                                                   x86_64                                           3.2-2.fc27                                                    updates                                            72 k
+Installing weak dependencies:
+ perl-CPAN-Meta                                                        noarch                                           2.150010-394.fc27                                             fedora                                            189 k
+
+Transaction Summary
+==============================================================================================================================================================================================================================================
+Install  14 Packages
+
+Total download size: 1.9 M
+Installed size: 6.8 M
+Downloading Packages:
+(1/14): perl-ExtUtils-Command-7.30-2.fc27.noarch.rpm                                                                                                                                                           81 kB/s |  17 kB     00:00    
+(2/14): perl-ExtUtils-Install-2.14-3.fc27.noarch.rpm                                                                                                                                                          159 kB/s |  45 kB     00:00    
+(3/14): perl-ExtUtils-Manifest-1.70-394.fc27.noarch.rpm                                                                                                                                                       233 kB/s |  35 kB     00:00    
+(4/14): perl-ExtUtils-ParseXS-3.35-1.fc27.noarch.rpm                                                                                                                                                          367 kB/s |  81 kB     00:00    
+(5/14): perl-version-0.99.18-5.fc27.x86_64.rpm                                                                                                                                                                332 kB/s |  65 kB     00:00    
+(6/14): perl-ExtUtils-MakeMaker-7.30-2.fc27.noarch.rpm                                                                                                                                                        419 kB/s | 296 kB     00:00    
+(7/14): perl-Test-Harness-3.39-4.fc27.noarch.rpm                                                                                                                                                              444 kB/s | 276 kB     00:00    
+(8/14): systemtap-sdt-devel-3.2-2.fc27.x86_64.rpm                                                                                                                                                             162 kB/s |  72 kB     00:00    
+(9/14): perl-devel-5.26.1-402.fc27.x86_64.rpm                                                                                                                                                                 1.0 MB/s | 594 kB     00:00    
+(10/14): python3-pyparsing-2.1.10-4.fc27.noarch.rpm                                                                                                                                                           372 kB/s | 140 kB     00:00    
+(11/14): perl-CPAN-Meta-Requirements-2.140-395.fc27.noarch.rpm                                                                                                                                                250 kB/s |  35 kB     00:00    
+(12/14): perl-CPAN-Meta-YAML-0.018-395.fc27.noarch.rpm                                                                                                                                                        229 kB/s |  32 kB     00:00    
+(13/14): perl-CPAN-Meta-2.150010-394.fc27.noarch.rpm                                                                                                                                                          443 kB/s | 189 kB     00:00    
+(14/14): perl-JSON-PP-2.94-4.fc27.noarch.rpm                                                                                                                                                                  228 kB/s |  65 kB     00:00    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                         775 kB/s | 1.9 MB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                                                                      1/1 
+  Installing       : perl-version-6:0.99.18-5.fc27.x86_64                                                                                                                                                                                1/14 
+  Installing       : perl-ExtUtils-ParseXS-1:3.35-1.fc27.noarch                                                                                                                                                                          2/14 
+  Installing       : perl-CPAN-Meta-Requirements-2.140-395.fc27.noarch                                                                                                                                                                   3/14 
+  Installing       : perl-JSON-PP-1:2.94-4.fc27.noarch                                                                                                                                                                                   4/14 
+  Installing       : perl-CPAN-Meta-YAML-0.018-395.fc27.noarch                                                                                                                                                                           5/14 
+  Installing       : python3-pyparsing-2.1.10-4.fc27.noarch                                                                                                                                                                              6/14 
+  Installing       : systemtap-sdt-devel-3.2-2.fc27.x86_64                                                                                                                                                                               7/14 
+  Installing       : perl-Test-Harness-1:3.39-4.fc27.noarch                                                                                                                                                                              8/14 
+  Installing       : perl-ExtUtils-Manifest-1.70-394.fc27.noarch                                                                                                                                                                         9/14 
+  Installing       : perl-ExtUtils-Command-1:7.30-2.fc27.noarch                                                                                                                                                                         10/14 
+  Installing       : perl-devel-4:5.26.1-402.fc27.x86_64                                                                                                                                                                                11/14 
+  Installing       : perl-ExtUtils-Install-2.14-3.fc27.noarch                                                                                                                                                                           12/14 
+  Installing       : perl-ExtUtils-MakeMaker-1:7.30-2.fc27.noarch                                                                                                                                                                       13/14 
+  Installing       : perl-CPAN-Meta-2.150010-394.fc27.noarch                                                                                                                                                                            14/14 
+  Running scriptlet: perl-CPAN-Meta-2.150010-394.fc27.noarch                                                                                                                                                                            14/14 
+Running as unit: run-r9fe990a7add149ccabe7de7febca5786.service
+  Verifying        : perl-ExtUtils-MakeMaker-1:7.30-2.fc27.noarch                                                                                                                                                                        1/14 
+  Verifying        : perl-ExtUtils-Command-1:7.30-2.fc27.noarch                                                                                                                                                                          2/14 
+  Verifying        : perl-ExtUtils-Install-2.14-3.fc27.noarch                                                                                                                                                                            3/14 
+  Verifying        : perl-ExtUtils-Manifest-1.70-394.fc27.noarch                                                                                                                                                                         4/14 
+  Verifying        : perl-ExtUtils-ParseXS-1:3.35-1.fc27.noarch                                                                                                                                                                          5/14 
+  Verifying        : perl-Test-Harness-1:3.39-4.fc27.noarch                                                                                                                                                                              6/14 
+  Verifying        : perl-version-6:0.99.18-5.fc27.x86_64                                                                                                                                                                                7/14 
+  Verifying        : perl-devel-4:5.26.1-402.fc27.x86_64                                                                                                                                                                                 8/14 
+  Verifying        : systemtap-sdt-devel-3.2-2.fc27.x86_64                                                                                                                                                                               9/14 
+  Verifying        : python3-pyparsing-2.1.10-4.fc27.noarch                                                                                                                                                                             10/14 
+  Verifying        : perl-CPAN-Meta-2.150010-394.fc27.noarch                                                                                                                                                                            11/14 
+  Verifying        : perl-CPAN-Meta-Requirements-2.140-395.fc27.noarch                                                                                                                                                                  12/14 
+  Verifying        : perl-CPAN-Meta-YAML-0.018-395.fc27.noarch                                                                                                                                                                          13/14 
+  Verifying        : perl-JSON-PP-1:2.94-4.fc27.noarch                                                                                                                                                                                  14/14 
+
+Installed:
+  perl-ExtUtils-MakeMaker.noarch 1:7.30-2.fc27   perl-CPAN-Meta.noarch 2.150010-394.fc27       perl-CPAN-Meta-Requirements.noarch 2.140-395.fc27   perl-CPAN-Meta-YAML.noarch 0.018-395.fc27   perl-ExtUtils-Command.noarch 1:7.30-2.fc27  
+  perl-ExtUtils-Install.noarch 2.14-3.fc27       perl-ExtUtils-Manifest.noarch 1.70-394.fc27   perl-ExtUtils-ParseXS.noarch 1:3.35-1.fc27          perl-JSON-PP.noarch 1:2.94-4.fc27           perl-Test-Harness.noarch 1:3.39-4.fc27      
+  perl-devel.x86_64 4:5.26.1-402.fc27            perl-version.x86_64 6:0.99.18-5.fc27          python3-pyparsing.noarch 2.1.10-4.fc27              systemtap-sdt-devel.x86_64 3.2-2.fc27      
+
+Complete!
+14:36:59(-)root@datacomm-09:Time-ParseDate-2015.103$ perl Makefile.PL 
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite Time::Piece 0 not found.
+Generating a Unix-style Makefile
+Writing Makefile for Time::ParseDate
+Writing MYMETA.yml and MYMETA.json
+14:37:01(-)root@datacomm-09:Time-ParseDate-2015.103$ make test
+cp lib/Time/Timezone.pm blib/lib/Time/Timezone.pm
+cp lib/Time/JulianDay.pm blib/lib/Time/JulianDay.pm
+cp lib/Time/ParseDate.pm blib/lib/Time/ParseDate.pm
+cp lib/Time/CTime.pm blib/lib/Time/CTime.pm
+cp lib/Time/DaysInMonth.pm blib/lib/Time/DaysInMonth.pm
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/datetime.t .. Can't locate Time/Piece.pm in @INC (you may need to install the Time::Piece module) (@INC contains: . /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/lib /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/arch /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at t/datetime.t line 353.
+BEGIN failed--compilation aborted at t/datetime.t line 353.
+t/datetime.t .. Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+t/metdate.t ... Can't locate Test/More.pm in @INC (you may need to install the Test::More module) (@INC contains: . /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/lib /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/arch /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at t/metdate.t line 5.
+BEGIN failed--compilation aborted at t/metdate.t line 5.
+t/metdate.t ... Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+t/order1.t .... Can't locate Test/More.pm in @INC (you may need to install the Test::More module) (@INC contains: . /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/lib /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/arch /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at t/order1.t line 5.
+BEGIN failed--compilation aborted at t/order1.t line 5.
+t/order1.t .... Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+t/order2.t .... Can't locate Test/More.pm in @INC (you may need to install the Test::More module) (@INC contains: . /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/lib /root/Downloads/SnortSnarf-1.0/Time-modules/Time-ParseDate-2015.103/blib/arch /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at t/order2.t line 6.
+BEGIN failed--compilation aborted at t/order2.t line 6.
+t/order2.t .... Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+
+Test Summary Report
+-------------------
+t/datetime.t (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+t/metdate.t (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+t/order1.t  (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+t/order2.t  (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+Files=4, Tests=0,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.02 cusr  0.00 csys =  0.04 CPU)
+Result: FAIL
+Failed 4/4 test programs. 0/0 subtests failed.
+make: *** [Makefile:858: test_dynamic] Error 2
+14:37:05(-)root@datacomm-09:Time-ParseDate-2015.103$ make install
+Manifying 5 pod documents
+Installing /usr/local/share/perl5/Time/JulianDay.pm
+Installing /usr/local/share/perl5/Time/DaysInMonth.pm
+Installing /usr/local/share/perl5/Time/ParseDate.pm
+Installing /usr/local/share/perl5/Time/Timezone.pm
+Installing /usr/local/share/perl5/Time/CTime.pm
+Installing /usr/local/share/man/man3/Time::CTime.3pm
+Installing /usr/local/share/man/man3/Time::JulianDay.3pm
+Installing /usr/local/share/man/man3/Time::DaysInMonth.3pm
+Installing /usr/local/share/man/man3/Time::Timezone.3pm
+Installing /usr/local/share/man/man3/Time::ParseDate.3pm
+Appending installation info to /usr/lib64/perl5/perllocal.pod
+14:37:08(-)root@datacomm-09:Time-ParseDate-2015.103$ cd ..
+14:37:12(-)root@datacomm-09:Time-modules$ ls -la
+total 12
+drwxr-xr-x.  3  500 users 4096 Feb 22 14:35 .
+drwxr-xr-x. 11  500 users 4096 Jul  5  2006 ..
+drwxr-xr-x.  5 1000  1000 4096 Feb 22 14:37 Time-ParseDate-2015.103
+14:37:13(-)root@datacomm-09:Time-modules$ cd ..
+14:37:14(-)root@datacomm-09:SnortSnarf-1.0$ ls -l
+total 144
+drwxr-xr-x. 2 500 users  4096 Jul  5  2006 cgi
+-r--r--r--. 1 500 users 20241 Jul  5  2006 Changes
+-r--r--r--. 1 500 users 18007 Jul  5  2006 COPYING
+drwxr-xr-x. 3 500 users  4096 Jul  5  2006 include
+-r--r--r--. 1 500 users    36 Jul  5  2006 new-annotation-base.xml
+drwxr-xr-x. 2 500 users  4096 Jul  5  2006 nmap2html
+-rw-------. 1 500 users  1436 Jul  5  2006 nohup.out
+-rw-rw-r--. 1 500 users   224 Jul  5  2006 quick.dat
+drwxrwxr-x. 2 500 users  4096 Jul  5  2006 RCS
+-rw-r--r--. 1 500 users  6635 Jul  5  2006 README
+lrwxrwxrwx. 1 500 users    26 Jul  5  2006 README.nmap2html -> nmap2html/README.nmap2html
+lrwxrwxrwx. 1 500 users    16 Jul  5  2006 README.SISR -> sisr/README.SISR
+-rw-rw-r--. 1 500 users  4695 Jul  5  2006 run.out
+drwxr-xr-x. 5 500 users  4096 Jul  5  2006 sisr
+drwxr-xr-x. 2 500 users  4096 Jul  5  2006 snfout.snort.alert
+drwxr-xr-x. 9 500 users  4096 Jul  5  2006 SnortSnarf-021111.1
+-rwxr-xr-x. 1 500 users 18527 Jul  5  2006 snortsnarf.pl
+drwxr-xr-x. 3 500 users  4096 Feb 22 14:35 Time-modules
+-r--r--r--. 1 500 users 17854 Jul  5  2006 Usage
+drwxr-xr-x. 2 500 users  4096 Jul  5  2006 utilities
+14:37:17(-)root@datacomm-09:SnortSnarf-1.0$ perl snortsnarf.pl 
+Can't use an array as a reference at include/SnortSnarf/HTMLMemStorage.pm line 290.
+Compilation failed in require at snortsnarf.pl line 93.
+BEGIN failed--compilation aborted at snortsnarf.pl line 93.
+14:37:33(-)root@datacomm-09:SnortSnarf-1.0$ cd Time-modules/
+14:37:41(-)root@datacomm-09:Time-modules$ ls -la
+total 12
+drwxr-xr-x.  3  500 users 4096 Feb 22 14:35 .
+drwxr-xr-x. 11  500 users 4096 Jul  5  2006 ..
+drwxr-xr-x.  5 1000  1000 4096 Feb 22 14:37 Time-ParseDate-2015.103
+14:37:42(-)root@datacomm-09:Time-modules$ cd Time-ParseDate-2015.103/
+14:37:43(-)root@datacomm-09:Time-ParseDate-2015.103$ ls -al
+total 88
+drwxr-xr-x. 5 1000  1000  4096 Feb 22 14:37 .
+drwxr-xr-x. 3  500 users  4096 Feb 22 14:35 ..
+drwxr-xr-x. 8 root root   4096 Feb 22 14:37 blib
+-rw-r--r--. 1 1000  1000  7796 Oct 30  2015 Changes
+drwxr-xr-x. 3 1000  1000  4096 Oct 30  2015 lib
+-rw-r--r--. 1 root root  29219 Feb 22 14:37 Makefile
+-rw-r--r--. 1 1000  1000   482 Oct 30  2015 Makefile.PL
+-rw-r--r--. 1 1000  1000   353 Oct 30  2015 MANIFEST
+-rw-r--r--. 1 1000  1000   953 Oct 30  2015 META.json
+-rw-r--r--. 1 1000  1000   549 Oct 30  2015 META.yml
+-rw-r--r--. 1 root root   1051 Feb 22 14:37 MYMETA.json
+-rw-r--r--. 1 root root    655 Feb 22 14:37 MYMETA.yml
+-rw-r--r--. 1 root root      0 Feb 22 14:37 pm_to_blib
+-rw-r--r--. 1 1000  1000   604 Nov 28  1998 README
+drwxr-xr-x. 2 1000  1000  4096 Oct 30  2015 t
+14:37:44(-)root@datacomm-09:Time-ParseDate-2015.103$ cd ..
+14:37:46(-)root@datacomm-09:Time-modules$ cd ..
+14:37:47(-)root@datacomm-09:SnortSnarf-1.0$ cd include/
+14:37:48(-)root@datacomm-09:include$ ls -al
+total 40
+drwxr-xr-x.  3 500 users  4096 Jul  5  2006 .
+drwxr-xr-x. 11 500 users  4096 Jul  5  2006 ..
+-rw-r--r--.  1 500 users  3600 Jul  5  2006 ann_xml.pl
+-rw-r--r--.  1 500 users 14714 Jul  5  2006 IPAddrContact.pm
+drwxr-xr-x.  2 500 users  4096 Jul  5  2006 SnortSnarf
+-rw-r--r--.  1 500 users   903 Jul  5  2006 web_utils.pl
+-rw-r--r--.  1 500 users  2614 Jul  5  2006 xml_help.pl
+14:37:49(-)root@datacomm-09:include$ cd SnortSnarf/
+14:37:52(-)root@datacomm-09:SnortSnarf$ ls -la
+total 1880
+drwxr-xr-x. 2 500 users    4096 Jul  5  2006 .
+drwxr-xr-x. 3 500 users    4096 Jul  5  2006 ..
+-rw-r--r--. 1 500 users    2438 Jul  5  2006 AlertBase.pm
+-rw-r--r--. 1 500 users    3939 Jul  5  2006 AllMods.pm
+-rw-r--r--. 1 500 users   11527 Jul  5  2006 BasicFilters.pm
+-rw-r--r--. 1 500 users    5720 Jul  5  2006 BasicSorters.pm
+-rw-r--r--. 1 500 users    1668 Jul  5  2006 Filtering.pm
+-rw-r--r--. 1 500 users    8812 Jul  5  2006 Filter.pm
+-rw-r--r--. 1 500 users   11019 Jul  5  2006 HTMLAnomMemStorage.pm
+-rw-r--r--. 1 500 users   15435 Jul  5  2006 HTMLMemStorage.pm
+-rw-r--r--. 1 500 users   67362 Jul  5  2006 HTMLOutput+other.pm
+-rw-r--r--. 1 500 users   84743 Jul  5  2006 HTMLOutput.pm
+-rw-r--r--. 1 500 users    2731 Jul  5  2006 Input.pm
+-rw-r--r--. 1 500 users    2839 Jul  5  2006 IPObfuscater.pm
+-rw-r--r--. 1 500 users    2118 Jul  5  2006 KnownEquiv.pm
+-rw-r--r--. 1 500 users    3558 Jul  5  2006 MemAlert.pm
+-rw-r--r--. 1 500 users    2696 Jul  5  2006 MemPacket.pm
+-rw-r--r--. 1 500 users    1997 Jul  5  2006 MemStorage.pm
+-rw-r--r--. 1 500 users    3186 Jul  5  2006 MemTimeBase.pm
+-rw-r--r--. 1 500 users    4013 Jul  5  2006 MultiStore.pm
+-rw-r--r--. 1 500 users    2752 Jul  5  2006 PacketBase.pm
+-rw-r--r--. 1 500 users   22928 Jul  5  2006 SnortDBInput.pm
+-rw-r--r--. 1 500 users   18974 Jul  5  2006 SnortDBInput.pm.save
+-rw-r--r--. 1 500 users 1548437 Jul  5  2006 SnortDBInput.ps
+-rw-r--r--. 1 500 users   25019 Jul  5  2006 SnortFileInput.pm
+-rw-r--r--. 1 500 users    5934 Jul  5  2006 SnortRules.pm
+-rw-r--r--. 1 500 users    1662 Jul  5  2006 SorterBase.pm
+-rw-r--r--. 1 500 users     895 Jul  5  2006 Sort.pm
+-rw-r--r--. 1 500 users    3547 Jul  5  2006 StorageBase.pm
+-rw-r--r--. 1 500 users    2253 Jul  5  2006 TimeFilters.pm
+14:37:53(-)root@datacomm-09:SnortSnarf$ nvim HTMLMemStorage.pm    	#change @arr to $$arr line 290
+14:38:13(-)root@datacomm-09:SnortSnarf$ nvim HTMLAnomMemStorage.pm 	#change @arr to $$arr line 260
+\14:38:25(-)root@datacomm-09:SnortSnarf$ cd ..
+14:38:27(-)root@datacomm-09:include$ cd ..
+14:38:28(-)root@datacomm-09:SnortSnarf-1.0$ perl snortsnarf.pl 
+Warning: no input sources specified, so we are using the default (/var/log/snort.alert); you can remove this warning by explicitly indicating input source(s) you want on the command line
+SnortFileInput: input file /var/log/snort.alert does not exist; skipping it
+14:38:36(-)root@datacomm-09:SnortSnarf-1.0$ ls /var/log/snort/
+alert  snort.log.1519338577  snort.log.1519338692
+ld: use the --help option for usage information
+14:39:47(-)root@datacomm-09:SnortSnarf-1.0$ ls -la
+total 184
+drwxr-xr-x. 11  500 users  4096 Feb 22 14:39 .
+drwxr-xr-x.  5 root root   4096 Feb 22 14:35 ..
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 cgi
+-r--r--r--.  1  500 users 20241 Jul  5  2006 Changes
+-r--r--r--.  1  500 users 18007 Jul  5  2006 COPYING
+drwxr-xr-x.  3  500 users  4096 Jul  5  2006 include
+-r--r--r--.  1  500 users    36 Jul  5  2006 new-annotation-base.xml
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 nmap2html
+-rw-------.  1  500 users  1436 Jul  5  2006 nohup.out
+-rw-rw-r--.  1  500 users   224 Jul  5  2006 quick.dat
+drwxrwxr-x.  2  500 users  4096 Jul  5  2006 RCS
+-rw-r--r--.  1  500 users  6635 Jul  5  2006 README
+lrwxrwxrwx.  1  500 users    26 Jul  5  2006 README.nmap2html -> nmap2html/README.nmap2html
+lrwxrwxrwx.  1  500 users    16 Jul  5  2006 README.SISR -> sisr/README.SISR
+-rw-rw-r--.  1  500 users  4695 Jul  5  2006 run.out
+drwxr-xr-x.  5  500 users  4096 Jul  5  2006 sisr
+drwxr-xr-x.  2  500 users  4096 Feb 22 14:38 snfout.snort.alert
+drwxr-xr-x.  9  500 users  4096 Jul  5  2006 SnortSnarf-021111.1
+-rwxr-xr-x.  1  500 users 18527 Jul  5  2006 snortsnarf.pl
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start1
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start2
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start3
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop1
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop2
+-rw-r--r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop3
+drwxr-xr-x.  3  500 users  4096 Feb 22 14:35 Time-modules
+-r--r--r--.  1  500 users 17854 Jul  5  2006 Usage
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 utilities
+14:39:48(-)root@datacomm-09:SnortSnarf-1.0$ cd sisr
+14:39:55(-)root@datacomm-09:sisr$ ls -al
+total 44
+drwxr-xr-x.  5 500 users  4096 Jul  5  2006 .
+drwxr-xr-x. 11 500 users  4096 Feb 22 14:39 ..
+drwxr-xr-x.  2 500 users  4096 Jul  5  2006 cgi
+-r--r--r--.  1 500 users  1269 Jul  5  2006 ex-report.txt
+-r--r--r--.  1 500 users  1720 Jul  5  2006 ex-sisr.config
+drwxr-xr-x.  2 500 users  4096 Jul  5  2006 include
+drwxr-xr-x.  2 500 users  4096 Jul  5  2006 modules
+-r--r--r--.  1 500 users 12156 Jul  5  2006 README.SISR
+-r--r--r--.  1 500 users   514 Jul  5  2006 sisr_modlist
+14:39:56(-)root@datacomm-09:sisr$ cd modules/
+14:39:59(-)root@datacomm-09:modules$ ls a-l
+ls: cannot access 'a-l': No such file or directory
+14:39:59(-)root@datacomm-09:modules$ ls -al
+total 124
+drwxr-xr-x. 2 500 users 4096 Jul  5  2006 .
+drwxr-xr-x. 5 500 users 4096 Jul  5  2006 ..
+-rw-r--r--. 1 500 users 2636 Jul  5  2006 add_alert_set_notes_to_anns.pl
+-rw-r--r--. 1 500 users 1631 Jul  5  2006 add_alerts_to_db_set.pl
+-rw-r--r--. 1 500 users 1481 Jul  5  2006 add_annotation_to_inc_db.pl
+-rw-r--r--. 1 500 users 1824 Jul  5  2006 add_incident_to_db.pl
+-rw-r--r--. 1 500 users 1841 Jul  5  2006 add_inc_mail_annotation.pl
+-rw-r--r--. 1 500 users 1364 Jul  5  2006 config_alert_set_db.pl
+-rw-r--r--. 1 500 users 2230 Jul  5  2006 config_inc_flds_db.pl
+-rw-r--r--. 1 500 users 3750 Jul  5  2006 confirm_email.pl
+-rw-r--r--. 1 500 users 3400 Jul  5  2006 create_inc_form.pl
+-rw-r--r--. 1 500 users 2501 Jul  5  2006 earliest_latest_times.pl
+-rw-r--r--. 1 500 users 1615 Jul  5  2006 extr_alert_ids.pl
+-rw-r--r--. 1 500 users 1576 Jul  5  2006 extr_alert_set_details.pl
+-rw-r--r--. 1 500 users 1787 Jul  5  2006 extr_alerts.pl
+-rw-r--r--. 1 500 users 1272 Jul  5  2006 file_text_map.pl
+-rw-r--r--. 1 500 users 6544 Jul  5  2006 incident_view.pl
+-rw-r--r--. 1 500 users 3082 Jul  5  2006 inc_list_view.pl
+-rw-r--r--. 1 500 users 1770 Jul  5  2006 inst_flds.pl
+-rw-r--r--. 1 500 users 3100 Jul  5  2006 lab_set_view.pl
+-rw-r--r--. 1 500 users 1909 Jul  5  2006 load_inc_fields.pl
+-rw-r--r--. 1 500 users 2293 Jul  5  2006 nets_from_ips.pl
+-rw-r--r--. 1 500 users 2247 Jul  5  2006 parse_mailtempl.pl
+-rw-r--r--. 1 500 users 1409 Jul  5  2006 send_mail.pl
+-rw-r--r--. 1 500 users 1781 Jul  5  2006 set_field_summation.pl
+-rw-r--r--. 1 500 users 2299 Jul  5  2006 set_flags.pl
+-rw-r--r--. 1 500 users 1300 Jul  5  2006 setifempty2.pl
+-rw-r--r--. 1 500 users 2508 Jul  5  2006 set_list_view.pl
+-rw-r--r--. 1 500 users 1402 Jul  5  2006 whois_lookup.pl
+-rw-r--r--. 1 500 users 3293 Jul  5  2006 wrap_fields.pl
+14:40:01(-)root@datacomm-09:modules$ cd ..
+14:40:02(-)root@datacomm-09:sisr$ cd ..
+14:40:14(-)root@datacomm-09:SnortSnarf-1.0$ ls -la
+total 184
+drwxr-xr-x. 11  500 users  4096 Feb 22 14:39 .
+drwxr-xr-x.  5 root root   4096 Feb 22 14:35 ..
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 cgi
+-r--r--r--.  1  500 users 20241 Jul  5  2006 Changes
+-r--r--r--.  1  500 users 18007 Jul  5  2006 COPYING
+drwxr-xr-x.  3  500 users  4096 Jul  5  2006 include
+-r--r--r--.  1  500 users    36 Jul  5  2006 new-annotation-base.xml
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 nmap2html
+-rw-------.  1  500 users  1436 Jul  5  2006 nohup.out
+-rw-rw-r--.  1  500 users   224 Jul  5  2006 quick.dat
+drwxrwxr-x.  2  500 users  4096 Jul  5  2006 RCS
+-rw-r--r--.  1  500 users  6635 Jul  5  2006 README
+lrwxrwxrwx.  1  500 users    26 Jul  5  2006 README.nmap2html -> nmap2html/README.nmap2html
+lrwxrwxrwx.  1  500 users    16 Jul  5  2006 README.SISR -> sisr/README.SISR
+-rw-rw-r--.  1  500 users  4695 Jul  5  2006 run.out
+drwxr-xr-x.  5  500 users  4096 Jul  5  2006 sisr
+drwxr-xr-x.  2  500 users  4096 Feb 22 14:38 snfout.snort.alert
+drwxr-xr-x.  9  500 users  4096 Jul  5  2006 SnortSnarf-021111.1
+-rwxr-xr-x.  1  500 users 18527 Jul  5  2006 snortsnarf.pl
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start1
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start2
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_start3
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop1
+-rw-rw-r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop2
+-rw-r--r--.  1  500 users    29 Jul  5  2006 .snortsnarf_stop3
+drwxr-xr-x.  3  500 users  4096 Feb 22 14:35 Time-modules
+-r--r--r--.  1  500 users 17854 Jul  5  2006 Usage
+drwxr-xr-x.  2  500 users  4096 Jul  5  2006 utilities
+14:40:15(-)root@datacomm-09:SnortSnarf-1.0$ cd snfout.snort.alert/
+14:40:21(-)root@datacomm-09:snfout.snort.alert$ ls -al
+total 28
+drwxr-xr-x.  2  500 users 4096 Feb 22 14:38 .
+drwxr-xr-x. 11  500 users 4096 Feb 22 14:39 ..
+-rw-r--r--.  1 root root  1268 Feb 22 14:38 index.html
+-rw-rw-r--.  1  500 users 4229 Jul  5  2006 SDlogo.gif
+-rw-r--r--.  1 root root  1712 Feb 22 14:38 topdests.html
+-rw-r--r--.  1 root root  1689 Feb 22 14:38 topsrcs.html
+14:40:21(-)root@datacomm-09:snfout.snort.alert$  perl snortsnarf.pl /var/log/snort/alert
+
+NOW open snfout.alert/index.html
