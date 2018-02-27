@@ -1,0 +1,27 @@
+snort.org
+	2.9 tar
+	daq
+dnf install libpcap*
+dnf install pcre*
+dnf install libdnet* 
+
+in daq
+	configure
+	make
+	make install
+
+in snort
+	make
+	make install
+
+**congrats snort now runs**
+
+backup etc/snort.conf
+	edit it now
+		comment out 
+			dynamic line 253
+			white list 511
+			black list 512
+			attack response 26
+			
+						
