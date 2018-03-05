@@ -1,0 +1,41 @@
+# Pseudocode
+
+**blocked_users**
+list of bloked users and time stamp of unban
+
+**setup**
+takes argument of password attempts allowed and ban duration
+Add IPS_logger to cron
+Add IPS to cron
+start IPS_logger
+start IPS {attempts}{ban_duration}
+
+**IPS_logger**
+tail -fn0 /var/log/secure | grep "fail" >> IPS.log
+
+**IPS**
+infinite loop {  
+	pause untill IPS.log changes  for python try 
+	get and store list of IP addresses and sort 
+	for every ip in list {
+		count occurence in ips.log
+		if count is => {attempts}{
+			iptables rule
+			unban_time = get current time + {ban_duration}
+			"$ip $unban_time" >> blocked_users
+			at $unban_time run unban.bash $ip
+		}
+	}
+}
+
+**ban**
+
+**unban**
+
+
+**reset**
+undo bans made by IPS
+stop IPS_logger
+stop IPS
+remove IPS_logger from cron
+remove IPS from cron

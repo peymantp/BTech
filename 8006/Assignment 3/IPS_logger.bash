@@ -1,0 +1,1 @@
+tail -fn0 /var/log/secure | grep "fail" >> IPS.log
