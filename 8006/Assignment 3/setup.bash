@@ -5,15 +5,17 @@ if [ $# -ne 2 ]
 fi
 
 echo "Setting up IPS"
-dnf install at 
-dnf install inotify-tools #https://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes
-cp ips.py /usr/local/bin/
-cp ips_logger.py /usr/local/bin/
-echo "files copied to /usr/local/bin/"
-crontab -l | {cat; echo "@reboot /usr/local/bin/ips_logger.py"; echo "@reboot /usr/local/bin/ips.py $1 $2"} | crontab -
-#crontab -e opens vim so that's why i do it this way
-echo "scripts added to cron"
-echo "scripts started"
-/usr/local/bin/ips.py
-/usr/local/bin/ips_logger.py
+dnf intall inotify-tools -y
+atq
+
+cp runner.sh /usr/local/etc/
+cp ips.awk /usr/local/etc/
+chmod +x /usr/local/etc/*
+
+cp ips.service /etc/systemd/system/
+chmod +x /etc/systemd/system/ips.service
+systemctl daemon-reload
+systemctl enable ips.service
+echo "service started"
+
 echo "Setup complete"
