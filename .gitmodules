@@ -1,3 +1,6 @@
 [submodule "8005/multiserve"]
 	path = 8005/multiserve
 	url = https://github.com/jhewarren/multiserve.git
+[submodule "8505A1"]
+	path = 8505A1
+	url = https://github.com/peymantp/8505A1.git
