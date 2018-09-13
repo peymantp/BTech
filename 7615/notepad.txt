@@ -1,0 +1,19 @@
+Computer Architecture
+---------------------
+Big Ideas
+
+Defn of computer:  CPU, IO, Memory
+
+Memory: unique address to access data
+Accessing memory: memory size determines addressing bits
+
+memory can be code, or data
+
+running a program:  fetch, decode, execute
+
+setup linux
+
+
+
+
+
