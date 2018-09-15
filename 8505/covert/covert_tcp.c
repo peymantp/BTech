@@ -48,20 +48,100 @@ unsigned int host_convert(char *);
 void usage(char *);
 
 main(int argc, char **argv) {
-    unsigned int source_host = 0, dest_host = 0;
-    unsigned short source_port = 0, dest_port = 80;
-    int ipid = 0, seq = 0, ack = 0, server = 0, file = 0;
-    int count;
-    char desthost[80], srchost[80], filename[80];
+  unsigned int source_host=0,
+  dest_host=0;
+  unsigned short source_port=0,
+  dest_port=80;
+  int ipid=0,
+  seq=0,
+  ack=0,
+  server=0,
+  file=0;
+  int count;
+  char desthost[80],
+  srchost[80],
+  filename[80];
 
-    /* Title */
-    printf("Covert TCP %s (c)1996 Craig H. Rowland (crowland@psionic.com)\n", VERSION);
-    printf("Not for commercial use without permission.\n");
+  /* Title */
+  printf("Covert TCP %s (c)1996 Craig H. Rowland (crowland@psionic.com)\n", VERSION);
+  printf("Not for commercial use without permission.\n");
 
-    /* Can they run this? */
-    if (geteuid() != 0) {
-        printf("\nYou need to be root to run this.\n\n");
-        exit(0);
+  /* Can they run this? */
+  if(geteuid() !=0) {
+    printf("\nYou need to be root to run this.\n\n");
+    exit(0);
+  }
+
+  /* Tell them how to use this thing */
+  if((argc < 6) || (argc > 13)) {
+    usage(argv[0]);
+    exit(0);
+  }
+
+  /* No error checking on the args...next version :) */
+  for(count=0;count < argc; ++count) {
+    if (strcmp(argv[count], "-dest")==0) {
+      dest_host=host_convert(argv[count+1]);
+      strncpy(desthost, argv[count+1], 79);
+    }
+
+    else if (strcmp(argv[count], "-source")==0) {
+      source_host=host_convert(argv[count+1]);
+      strncpy(srchost, argv[count+1], 79);
+    }
+
+    else if (strcmp(argv[count], "-file")==0) {
+      strncpy(filename, argv[count+1], 79);
+      file=1;
+    }
+
+    else if (strcmp(argv[count], "-source_port")==0) source_port=atoi(argv[count+1]);
+    else if (strcmp(argv[count], "-dest_port")==0) dest_port=atoi(argv[count+1]);
+    else if (strcmp(argv[count], "-ipid")==0) ipid=1;
+    else if (strcmp(argv[count], "-seq")==0) seq=1;
+    else if (strcmp(argv[count], "-ack")==0) ack=1;
+    else if (strcmp(argv[count], "-server")==0) server=1;
+  }
+
+  /* check the encoding flags */
+  if(ipid+seq+ack==0) ipid=1;
+
+  /* set default encode type if none given */
+  else if (ipid+seq+ack !=1) {
+    printf("\n\nOnly one encoding/decode flag (-ipid -seq -ack) can be used at a time.\n\n");
+    exit(1);
+  }
+
+  /* Did they give us a filename? */
+  if(file !=1) {
+    printf("\n\nYou need to supply a filename (-file <filename>)\n\n");
+    exit(1);
+  }
+
+  if(server==0)
+
+  /* if they want to be a client do this... */
+    {
+    if (source_host==0 && dest_host==0) {
+      printf("\n\nYou need to supply a source and destination address for client mode.\n\n");
+      exit(1);
+    }
+
+    else if (ack==1) {
+      printf("\n\n-ack decoding can only be used in SERVER mode (-server)\n\n");
+      exit(1);
+    }
+
+    else {
+      printf("Destination Host: %s\n", desthost);
+      printf("Source Host     : %s\n", srchost);
+      if(source_port==0) printf("Originating Port: random\n");
+      else printf("Originating Port: %u\n", source_port);
+      printf("Destination Port: %u\n", dest_port);
+      printf("Encoded Filename: %s\n", filename);
+      if(ipid==1) printf("Encoding Type   : IP ID\n");
+      else if(seq==1) printf("Encoding Type   : IP Sequence Number\n");
+      printf("\nClient Mode: Sending data.\n\n");
     }
 
     /* Tell them how to use this thing */
