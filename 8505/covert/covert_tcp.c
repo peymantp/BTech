@@ -67,10 +67,7 @@ main(int argc, char **argv) {
   }
 
   /* No error checking on the args...next version :) */
-  for(count=0;
-  count < argc;
-
-  ++count) {
+  for(count=0;count < argc; ++count) {
     if (strcmp(argv[count], "-dest")==0) {
       dest_host=host_convert(argv[count+1]);
       strncpy(desthost, argv[count+1], 79);
