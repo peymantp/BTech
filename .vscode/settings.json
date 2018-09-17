@@ -15,5 +15,6 @@
 		"limits": "cpp",
 		"sstream": "cpp",
 		"functional": "cpp"
-	}
+	},
+	"python.pythonPath": "/usr/bin/python3"
 }
