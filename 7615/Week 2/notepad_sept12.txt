@@ -1,0 +1,39 @@
+Numbers symbols for counting
+Use 0/1 to count lots of things
+Binary number system
+
+0010 0011
+1 + 2 + 32 = 35
+1*2^0 + 1*2^1 + 1*2^5 = 35
+
+convert, no problem
+
+add bit by bit
+carry?  goes into the flag register.
+toss or use?  depends
+
+byte  8 bits
+word  16 bits (2 bytes)
+doubleword  32
+quadword 64
+
+4 bits map nicely to hexadecimal set of numbers (0-F)
+16 of "items" "symbols" 
+
+3BA4?
+4*16^0 + 10*16^1 + 11*16^2 + 3*16^3 = 
+
+Negatives Numbers
+Two's complement representation
+Easy to implement in hardware
+Subtractions are just additions
+Very magical
+
+
+
+
+
+
+
+
+
