@@ -13,7 +13,8 @@
 		"utility": "cpp",
 		"limits": "cpp",
 		"sstream": "cpp",
-		"functional": "cpp"
+		"functional": "cpp",
+		"typeinfo": "c"
 	},
 	"python.pythonPath": "/usr/bin/python3"
 }
