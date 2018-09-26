@@ -4,9 +4,6 @@ section .data
 	msg3: db "<<	     Peyman Tehrani Parsa       >>", 0x0a
         msg4: db "<<<<<<<<<<	##########	>>>>>>>>>>", 0x0a
         len_msg1: equ $-msg1
-	len_msg2: equ $-msg2
-	len_msg3: equ $-msg3
-	len_msg4: equ $-msg4
 		
 section .text
         global name
