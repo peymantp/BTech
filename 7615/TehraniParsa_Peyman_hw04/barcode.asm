@@ -3,17 +3,17 @@
 
 section .data
 ;for now the digits are set as data in addresses
-b1	dd 0
-b2	dd 5
-b3	dd 5
-b4	dd 5
-b5	dd 7
-b6	dd 7
-b7	dd 1
-b8	dd 0
-b9	dd 2
-b10	dd 5
-b11	dd 7
+b1	dd 2
+b2	dd 2
+b3	dd 3
+b4	dd 7
+b5	dd 5
+b6	dd 4
+b7	dd 7
+b8	dd 9
+b9	dd 9
+b10	dd 7
+b11	dd 6
 
 msg: db "Your barcode is: %d%d%d%d%d%d%d%d%d%d%d%d", 10,0 ;%d (decimal) is a variable that is pushed to the stack
 
