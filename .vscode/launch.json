@@ -16,7 +16,7 @@
 			"name": "Python: Attach",
 			"type": "python",
 			"request": "attach",
-			"port": 5678,
+			"port": 100,
 			"host": "localhost"
 		},
 		{
