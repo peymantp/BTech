@@ -1,10 +1,10 @@
-all: loop
+all: barcode masm
 
-loop: loop.asm
+barcode: barcode.asm
 	nasm -f elf32 -d ELF_TYPE asm_io.asm
-	nasm -f elf32 -d ELF_TYPE loop.asm
-	gcc -m32 driver.c loop.o asm_io.o -o loop
+	nasm -f elf32 -d ELF_TYPE barcode.asm
+	gcc -m32 driver.c barcode.o asm_io.o -o prog
 
-clear:
-	rm *.o
-	
+masn: zoom1.c zoom2.c
+	gcc -masm=intel -S zoom1.c -o zoom1.s
+	gcc -masm=intel -S zoom2.c -o zoom2.s

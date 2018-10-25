@@ -3,18 +3,17 @@
 
 section .data
 ;for now the digits are set as data in addresses
-num1	dd 0
-num2	dd 0
-num3	dd 0
-num4	dd 0
-num5	dd 0
-num6	dd 0
-num7	dd 0
-num8	dd 0
-num9	dd 0
-num10	dd 0
-num11	dd 0
-input	times 11 db 0
+b1	dd 2
+b2	dd 2
+b3	dd 3
+b4	dd 7
+b5	dd 5
+b6	dd 4
+b7	dd 7
+b8	dd 9
+b9	dd 9
+b10	dd 7
+b11	dd 6
 
 msg: db "Your barcode is: %d%d%d%d%d%d%d%d%d%d%d%d", 10,0 ;%d (decimal) is a variable that is pushed to the stack
 
@@ -24,48 +23,24 @@ extern printf ;let's the program know this line is from outside, aka the C drive
 global asm_main
 
 asm_main:
-	; grab user input
-	mov     eax, 3          ; sys_read syscall
-	mov     ebx, 0          ; std_in
-	mov     ecx, input      ; output to username
-	mov     edx, 11         ; accept 16 bytes
-	int     80h
-
-	;do while loop start
-	;set up loop counters
-	mov			ebx,  0 ;mem offest
-	mov			edx,	0;loop counter i
-loop1:
-	cmp				edx, 11	;compare counter
-	jg loop_end
-	movzx			eax, byte[input+edx] ;load byte from input
-	sub				eax, 48	;convert byte to int
-	mov				[num1+ebx], eax
-	add				ebx, 4	;increment counter
-	add				edx, 1	;increment counter
-	jmp loop1
-loop_end:
-
-	;do while loop end
-done:
 	pusha;set the registers state
 	mov 	ebp, esp ;moving the stack pointer to ebp
 	sub	esp, 4
 	;sum the even numbers
-	mov eax, [num2]
-	add eax, [num4]
-	add eax, [num6]
-	add eax, [num8]
-	add eax, [num10]
+	mov eax, [b2]
+	add eax, [b4]
+	add eax, [b6]
+	add eax, [b8]
+	add eax, [b10]
 	mov ecx, eax ;store sum of evens on ecx, so we can use eax
 
 	;sum the odd numbers
-	mov eax, [num1]
-	add eax, [num3]
-	add eax, [num5]
-	add eax, [num7]
-	add eax, [num9]
-	add eax, [num11]
+	mov eax, [b1]
+	add eax, [b3]
+	add eax, [b5]
+	add eax, [b7]
+	add eax, [b9]
+	add eax, [b11]
 
 	mov ebx, 3 ; the number we will multiply eax
 	mul ebx ;multiply the eax by this number, then store inside eax
@@ -90,17 +65,17 @@ done:
 
 .done: ;local label
 	;here we push the rest of the barcode numbers to the stack in reverse order cause of little indian
-	push dword [num11]
-	push dword [num10]
-	push dword [num9]
-	push dword [num8]
-	push dword [num7]
-	push dword [num6]
-	push dword [num5]
-	push dword [num4]
-	push dword [num3]
-	push dword [num2]
-	push dword [num1]
+	push dword [b11]
+	push dword [b10]
+	push dword [b9]
+	push dword [b8]
+	push dword [b7]
+	push dword [b6]
+	push dword [b5]
+	push dword [b4]
+	push dword [b3]
+	push dword [b2]
+	push dword [b1]
 	push 	msg ;push the message we want to the stack, all the %d will be filled now
 	call 	printf; show on terminal the completed message
 	;these lines are to exit from the program without dying to segment faults
