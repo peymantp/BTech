@@ -28,6 +28,6 @@ class AESCipher:
 
 #cipher = AESCipher('mysecretpassword')
 #encrypted = cipher.encrypt('Secret Message A')
-#decrypted = cipher.decrypt('vjxOSj7fDF2cm0M+nPWdcMlfjGyeZkC76nDDj1L6TS8=')
+#decrypted = cipher.decrypt(encrypted)
 #print (encrypted)
 #print (decrypted)
