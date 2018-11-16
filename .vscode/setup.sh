@@ -1,4 +1,4 @@
-python -mplatform | grep -qi Ubuntu && sudo apt install code -y || sudo dnf install code -y
+#python -mplatform | grep -qi Ubuntu && sudo apt install code -y || sudo dnf install code -y
 
 #list of extentions
 declare -a arr=(
