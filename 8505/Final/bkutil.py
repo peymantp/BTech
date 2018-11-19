@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import bkcrypt
+#import bkcrypt
 
 def message_to_bits(message) -> str:
     #Create the string that will hold all the bits.
@@ -13,7 +13,7 @@ def message_to_bits(message) -> str:
         #Concatenate with the placeholder
         messageData += str(var)
     return messageData
-
+'''
 def file_to_bits(filePath) -> str:
     #Open the file for modifications
     file = open(filePath, "rb")
@@ -22,7 +22,7 @@ def file_to_bits(filePath) -> str:
     #Convert whatever is in the file to bytes
     readFile = bytearray(file.read())
     fileName = filePath.split("/")
-    fileName = bkcrypt.encrypt(fileName[len(fileName) - 1])
+    fileName = encrypt(fileName[len(fileName) - 1])
     #Craft a header
     header = message_to_bits(fileName+"00000000");#0s are so we can tell its the file name
     #Add the header to the string
@@ -31,4 +31,4 @@ def file_to_bits(filePath) -> str:
     for bit in readFile:
         binaryString += bin(bit)[2:].zfill(8)
     return binaryString
-
+'''
