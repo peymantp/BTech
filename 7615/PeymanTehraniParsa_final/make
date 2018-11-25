@@ -1,0 +1,5 @@
+#!/bin/bash
+rm fib/fib.o merge/merge.o
+g++ -O3 fib/f.cpp -o fib/fib.o
+g++ -O3 merge/merge.cpp -o merge/merge.o
+g++ -O3  radix/radix.cpp -o  radix/radix.o

@@ -1,0 +1,8 @@
+#!/bin/bash
+./cgmemtime node "./fib/fib.js"
+./cgmemtime node "./merge/merge.js"
+./cgmemtime node "./radix/radix.js"
+
+./cgmemtime fib/fib.o
+./cgmemtime merge/merge.o
+./cgmemtime radix/radix.o
