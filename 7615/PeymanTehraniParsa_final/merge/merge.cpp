@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-const int SIZE = 242880; //Attempting to allocate more than 242880 bytes causes stack overflow
+const int SIZE = 1000000; //Attempting to allocate more than 242880 bytes causes stack overflow
 
 // Merges two subarrays of arr[]. 
 // First subarray is arr[l..m] 
