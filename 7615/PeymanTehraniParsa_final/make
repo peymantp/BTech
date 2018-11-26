@@ -1,5 +1,9 @@
 #!/bin/bash
-rm fib/fib.o merge/merge.o
+rm -I -r *.o test.*
 g++ -O3 fib/f.cpp -o fib/fib.o
 g++ -O3 merge/merge.cpp -o merge/merge.o
 g++ -O3  radix/radix.cpp -o  radix/radix.o
+
+emcc ./merge/merge.cpp -O2 -s WASM=1 -Wall -s MODULARIZE=1 -s ASSERTIONS=1 -o ./merge/test.js
+emcc ./fib/f.cpp -O2 -s WASM=1 -Wall -s MODULARIZE=1 -s ASSERTIONS=1 -o ./fib/test.js
+emcc ./radix/radix.cpp -O2 -s WASM=1 -Wall -s MODULARIZE=1 -s ASSERTIONS=1 -o ./radix/test.js
