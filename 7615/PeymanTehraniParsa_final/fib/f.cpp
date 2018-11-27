@@ -11,6 +11,7 @@ int main()
 
     for (int j = 0; j < 10; j++)
     {
+        t1 = 0, t2 = 1,nextTerm = 0;
         for (int i = 1; i <= n; ++i)
         {
             // Prints the first two terms.
@@ -27,7 +28,7 @@ int main()
             nextTerm = t1 + t2;
             t1 = t2;
             t2 = nextTerm;
-            cout << nextTerm;
+            //cout << nextTerm << "\n";
         }
     }
     return 0;
