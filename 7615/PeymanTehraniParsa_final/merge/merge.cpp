@@ -1,8 +1,4 @@
 #include<stdlib.h> 
-#include<stdio.h> 
-#include <iostream>
-
-using namespace std;
 const int SIZE = 242880; //Attempting to allocate more than 242880 bytes causes stack overflow
 
 // Merges two subarrays of arr[]. 
@@ -80,12 +76,46 @@ void mergeSort(int arr[], int l, int r)
 }
 
 int main() {
-    int arry[SIZE];
+    int arr[SIZE];
     for (int x = 0; x < SIZE; ++x) {
-        arry[x] = rand() + 1;
+        arr[x] = rand() + 1;
     }
-
-    mergeSort(arry, 0, SIZE - 1);
-
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
+    for (int x = 0; x < SIZE; ++x) {
+        arr[x] = rand() + 1;
+    }
+    mergeSort(arr, 0, SIZE - 1);
     return 0;
 }

@@ -1,17 +1,21 @@
 #!/bin/bash
 sudo ./cgmemtime --setup -g sudo --perm 775
+echo "JAVASCRIPT"
 ./cgmemtime node "./fib/fib.js"
 ./cgmemtime node "./merge/merge.js"
 ./cgmemtime node "./radix/radix.js"
-echo "--------------------------------------------"
-echo "--------------------------------------------"
-echo "--------------------------------------------"
+echo "----------------------------------------------------------------------------------------"
+echo "GCC C++"
 ./cgmemtime fib/fib.o
 ./cgmemtime merge/merge.o
 ./cgmemtime radix/radix.o
-echo "--------------------------------------------"
-echo "--------------------------------------------"
-echo "--------------------------------------------"
+echo "----------------------------------------------------------------------------------------"
+echo "EMSC index"
 ./cgmemtime node "./fib/index.js"
 ./cgmemtime node "./merge/index.js"
 ./cgmemtime node "./radix/index.js"
+echo "----------------------------------------------------------------------------------------"
+echo "EMSC js export"
+./cgmemtime node "./fib/test.js"
+./cgmemtime node "./merge/test.js"
+./cgmemtime node "./radix/test.js"

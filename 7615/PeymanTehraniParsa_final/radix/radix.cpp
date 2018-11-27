@@ -47,13 +47,57 @@ template <typename InputIterator, typename OutputIterator> void radixSort(InputI
 int main()
 {
     vector<unsigned> input(SIZE);
+    vector<unsigned> output(input.size());
     for (int x = 0; x < SIZE; ++x)
     {
         input[x] = rand() + 1;
     }
-    vector<unsigned> output(input.size());
     radixSort(input.begin(), input.end(), output.begin());
-    
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
+    for (int x = 0; x < SIZE; ++x)
+    {
+        input[x] = rand() + 1;
+    }
+    radixSort(input.begin(), input.end(), output.begin());
     //for (unsigned it : output){
     //    cout << it << endl;
     //}

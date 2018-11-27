@@ -47,6 +47,23 @@ function shuffle(array) {
     return array;
 }
 
-var arr = [...Array(1000000).keys()];
+var arr = [...Array(242881).keys()];
 shuffle(arr);
-console.log(mergesort(arr));
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
+var arr = [...Array(242881).keys()];
+shuffle(arr);
