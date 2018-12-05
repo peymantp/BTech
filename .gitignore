@@ -8,3 +8,4 @@
 *.code
 *.o
 *.pyc
+node_modules
