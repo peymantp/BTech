@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File t1",
+            "name": "Python: Current File (Integrated Terminal)",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -18,24 +18,17 @@
             ]
         },
         {
-            "name": "Python: Current File t2",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "args": [
-                "-t",
-                "Tpduiaohoenltlesccleu irt  mttyistnripoihsaotnmenn  u s fwlc",
-                "-k",
-                "9"
-            ]
-        },
-        {
-            "name": "Python: Attach",
+            "name": "Python: Remote Attach",
             "type": "python",
             "request": "attach",
             "port": 5678,
-            "host": "localhost"
+            "host": "localhost",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "."
+                }
+            ]
         },
         {
             "name": "Python: Module",
@@ -43,6 +36,19 @@
             "request": "launch",
             "module": "enter-your-module-name-here",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "console": "integratedTerminal",
+            "args": [
+                "runserver",
+                "--noreload",
+                "--nothreading"
+            ],
+            "django": true
         },
         {
             "name": "Python: Flask",
@@ -58,6 +64,13 @@
                 "--no-reload"
             ],
             "jinja": true
+        },
+        {
+            "name": "Python: Current File (External Terminal)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "externalTerminal"
         }
     ]
 }
