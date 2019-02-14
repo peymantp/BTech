@@ -1,27 +1,15 @@
 {
-  "name": "one-time-pad",
-  "version": "1.0.3",
-  "description": "a simple one-time pad cipher written in nodejs",
+  "name": "asn3",
+  "version": "1.0.0",
+  "description": "One time pad using bit manipulation. Created for BTECH COMP 7402",
   "main": "index.js",
+  "dependencies": {
+    "commander": "^2.19.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./index.js -h && ./index.js -f wap -e && ./index.js -k key -c cypher -d"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshterrill/one-time-pad.git"
-  },
-  "keywords": [
-    "cipher",
-    "one",
-    "time",
-    "pad",
-    "encryption",
-    "cryptography"
-  ],
-  "author": "Josh Terrill",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joshterrill/one-time-pad/issues"
-  },
-  "homepage": "https://github.com/joshterrill/one-time-pad#readme"
+  "author": "Peyman Tehrani Parsa",
+  "license": "ISC"
 }

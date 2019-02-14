@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "decrypt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["-k", "key", "-c", "cypher", "-d"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "encrypt",
+            "program": "${workspaceFolder}/index.js",
+            "args": ["-f", "wap","-e"]
+        }
+    ]
+}
