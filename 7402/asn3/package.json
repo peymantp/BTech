@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./index.js -h && ./index.js -f wap -e && ./index.js -k key -c cypher -d"
+    "test": "./index.js -f wap -e && ./index.js -k key -c cypher -d"
   },
   "author": "Peyman Tehrani Parsa",
   "license": "ISC"
